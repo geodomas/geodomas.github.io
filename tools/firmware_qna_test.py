@@ -1,8 +1,10 @@
 import json
 from openai import OpenAI
 from docx import Document
+import os
 
-FIRMWARE_FILE = "MetaCore_FIRMWARE/core/firmware_qna_test.docx"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FIRMWARE_FILE = os.path.join(BASE_DIR, "MetaCore_FIRMWARE", "core", "firmware_qna_test.docx")
 RESULTS_FILE = "demo/result_output.json"
 OPENAI_MODEL = "gpt-4"  # arba 'gpt-3.5-turbo'
 
