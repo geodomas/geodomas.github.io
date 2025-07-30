@@ -1,7 +1,11 @@
 import json
 from openai import OpenAI
 from docx import Document
+print("Looking for file:", FIRMWARE_FILE)
 import os
+if not os.path.exists(FIRMWARE_FILE):
+    print("[ERROR] FAILAS NERASTAS:", FIRMWARE_FILE)
+    exit(1)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIRMWARE_FILE = os.path.join(BASE_DIR, "MetaCore_FIRMWARE", "core", "firmware_qna_test.docx")
