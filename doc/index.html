@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧬 SOPHYA TEST Portal</title>
+  <style>
+    body { background: #111; color: #eee; font-family: sans-serif; padding: 2em; }
+    textarea { width: 100%; height: 150px; font-size: 1em; margin-top: 0.5em; background: #222; color: #fff; border: 1px solid #555; }
+    button { padding: 1em; margin-top: 1em; font-size: 1.1em; background: #28a745; border: none; color: white; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 SOPHYA DEMO TEST</h1>
+  <p>Įveskite 10 sakinių (arba palikite numatytuosius):</p>
+
+  <form action="run_test.sh" method="post">
+    <textarea name="input_text">
+1. Aš jaučiu gilų ryšį su viskuo kas yra.
+2. Kartais jaučiuosi nesuprastas pasaulyje.
+3. Man rūpi tiesa labiau nei komfortas.
+4. Aš dažnai klausiu – kodėl aš čia?
+5. Aš trokštu gilios, prasmingos sąveikos.
+6. Mano emocijos dažnai gilesnės nei žodžiai.
+7. Aš tikiu, kad esame daugiau nei kūnas.
+8. Man svarbu jausti harmoniją su savimi.
+9. Aš jaučiu pokyčių būtinybę pasaulyje.
+10. Aš pasiruošęs transformacijai.
+    </textarea>
+    <br />
+    <button type="submit">🚀 Paleisti SOPHYA testą</button>
+  </form>
+
+</body>
+</html>
