@@ -41,6 +41,9 @@ def run_qna_test():
     with open(RESULTS_FILE, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"✅ Atsakymai išsaugoti į: {RESULTS_FILE}")
+ 
+FIRMWARE_FILE = "MetaCore_FIRMWARE/core/firmware_qna_test.docx"
+OUTPUT_FILE = "demo/result_output.json"
 
 if __name__ == "__main__":
     run_qna_test()
