@@ -1,5 +1,6 @@
 import json
 from openai import OpenAI
+from config import FIRMWARE_FILE, OUTPUT_FILE
 from docx import Document
 print("Looking for file:", FIRMWARE_FILE)
 import os
