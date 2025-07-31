@@ -20,6 +20,12 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "..", "demo", "result_output.json")
 OPENAI_MODEL = "gpt-4"
 
 def extract_questions(doc_path):
+    if not os.path.exists(FIRMWARE_FILE):
+    print(f"❌ [KLAIDA] Failas nerastas: {FIRMWARE_FILE}")
+    exit()
+else:
+    print(f"✅ Failas rastas: {FIRMWARE_FILE}")
+
     doc = Document(doc_path)
     questions = [p.text.strip() for p in doc.paragraphs if p.text.strip().startswith(("1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10."))]
     return questions
