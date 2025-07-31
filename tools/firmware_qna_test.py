@@ -10,10 +10,14 @@ if not os.path.exists(FIRMWARE_FILE):
     print("[ERROR] FAILAS NERASTAS:", FIRMWARE_FILE)
     exit(1)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FIRMWARE_FILE = os.path.join(BASE_DIR, "MetaCore_FIRMWARE", "core", "firmware_qna_test.docx")
-RESULTS_FILE = "demo/result_output.json"
-OPENAI_MODEL = "gpt-4"  # arba 'gpt-3.5-turbo'
+# Jei nori naudoti centralizuotai:
+# from tools.config import FIRMWARE_FILE, OUTPUT_FILE
+
+# O jei tiesiai čia – naudok šitą:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FIRMWARE_FILE = os.path.join(BASE_DIR, "..", "MetaCore_FIRMWARE", "core", "firmware_qna_test.docx")
+OUTPUT_FILE = os.path.join(BASE_DIR, "..", "demo", "result_output.json")
+OPENAI_MODEL = "gpt-4"
 
 def extract_questions(doc_path):
     doc = Document(doc_path)
