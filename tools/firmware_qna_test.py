@@ -1,5 +1,7 @@
 import json
 from openai import OpenAI
+import sys
+sys.path.append("tools")
 from config import FIRMWARE_FILE, OUTPUT_FILE
 from docx import Document
 print("Looking for file:", FIRMWARE_FILE)
