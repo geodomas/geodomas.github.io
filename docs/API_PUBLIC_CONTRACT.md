@@ -21,3 +21,6 @@ Returns frequency, class/method/symmetry, connection family and public profile t
 Input: public question + language. Submission only. No automatic private-data lookup.
 
 Public responses never expose private server paths, prompts, raw management data, credentials, internal routing scores or proprietary production logic.
+
+## POST `/api/v1/mesh-summary`
+Input: a user-supplied JSON exported directly from `calc.geodomas.lt` (max 2 MB). The analyzer accepts the CALC mesh contract (`meta`, `vertices`, `edges`, `triangles`) and returns only aggregate public-safe metrics: topology counts, total/min/max edge length, 0.5 mm orientation chord groups, triangulated area and vertex valence. It does not query private GEODOMAS sources and is explicitly not a production cutting/BOM authority.
