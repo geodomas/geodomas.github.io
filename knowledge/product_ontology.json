@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "public_training_orientation",
+  "brand": "GEODOMAS",
+  "purpose": "Teach public users and AI systems how GEODOMAS product families differ, what problems they solve, how they are selected, and where engineering/project verification begins.",
+  "global_rules": [
+    "A dome geometry preset is not the same thing as a finished building product.",
+    "Product price is not the same thing as total project cost.",
+    "Frame, envelope, interior, foundation, logistics, installation and local construction work are separate scopes unless explicitly combined.",
+    "A catalog model is not automatically a permit-ready or site-verified project.",
+    "Geometry comes from GEODOMAS CALC/product sources; structural, thermal, legal and commercial claims require project-specific verification."
+  ],
+  "families": [
+    {
+      "id": "GLAMPING",
+      "name": "GLAMPING / HOSPITALITY DOMES",
+      "what_it_is": "Residential and hospitality dome family for private leisure, premium rental, glamping parks and resorts.",
+      "best_for": ["private leisure", "premium rental", "glamping unit", "resort", "small hospitality park"],
+      "how_it_differs": "Optimized around guest/living experience, repeatable accommodation layouts and scalable resort operation rather than office facade or protective-roof logic.",
+      "source_advantages": ["one family covers private leisure through large premium residences", "can scale from one unit to a resort/park", "package ladder from basic dome to Comfort and GLAMPING PRO"],
+      "model_examples": ["GLAMP 35", "GLAMP 50", "GLAMP 145", "GLAMP 210", "GLAMP 320", "GLAMP 430"],
+      "project_start": ["define business/private goal", "define occupancy", "define number of units", "select site", "select size/model direction", "choose package level", "verify local project/permit route"],
+      "verification_notes": ["exact model identity must match current product/CALC source", "all-season performance depends on actual envelope, ventilation and project engineering"]
+    },
+    {
+      "id": "HOMES",
+      "name": "DOME HOMES / RESIDENCES",
+      "what_it_is": "Permanent or seasonal dome homes and premium geodesic residences for private living, nature sites, homesteads and larger residential concepts.",
+      "best_for": ["primary residence", "house in nature", "family villa", "remote-work studio", "SPA/retreat", "small dome neighborhood"],
+      "how_it_differs": "Starts from residential function, plot, planning, envelope comfort and permit path; not simply a larger glamping unit.",
+      "source_advantages": ["strong panoramic connection to landscape", "supports compact to premium residence concepts", "can combine transparent and opaque/composite facade zones"],
+      "model_examples": ["HOMES 70", "HOMES 90", "HOMES 110", "HOMES 145", "HOMES 210", "HOMES 270", "HOMES 320", "HOMES 500"],
+      "project_start": ["define whether seasonal or permanent", "send plot/location", "define target area and occupants", "choose documentation route", "develop architectural concept", "verify structure/envelope/MEP", "prepare permit/build package"],
+      "verification_notes": ["marketing 10M/12M/15M narratives do not always map 1:1 to current CALC presets", "do not substitute nearest diameter automatically"]
+    },
+    {
+      "id": "GLAZED",
+      "name": "GLASS DOMES / OFFICES",
+      "what_it_is": "Aluminium-glass geodesic building and facade family for studios, offices, HQ buildings, administrative domes and business campuses.",
+      "best_for": ["team studio", "office", "multi-storey office", "HQ", "administrative building", "business campus"],
+      "how_it_differs": "The facade is an engineered aluminium-glass system; glass choice, solar control, sealing, internal floors, safety and building services are core project decisions.",
+      "source_advantages": ["architectural signature and daylight", "supports glass/composite facade zoning", "can integrate independent multi-storey internal building logic"],
+      "model_examples": ["Ø8 m+", "Ø9 m", "Ø10 m", "Ø11 m", "Ø14 m", "Ø16 m", "Ø18 m", "Ø20 m", "Ø22 m"],
+      "project_start": ["define building function", "provide plot and planning constraints", "define scale/floors", "define glass/composite ratio", "set solar/comfort/safety requirements", "choose structural/facade system", "prepare engineering and permit package"],
+      "verification_notes": ["glass type, U-value, solar factor, safety build-up and facade performance are project-specific", "multi-storey floor-to-shell interaction must be engineered"]
+    },
+    {
+      "id": "ROOFS",
+      "name": "TRANSPARENT ROOFS / PROTECTIVE DOMES",
+      "what_it_is": "Geodesic protective enclosure placed over a house, yard, terrace, modular complex, resort or large public/commercial zone.",
+      "best_for": ["house + yard cover", "terrace", "container/modular complex", "resort", "showroom", "event/community space"],
+      "how_it_differs": "The covered object remains a separate building/project; the dome acts as a protective environmental layer rather than the primary interior building.",
+      "source_advantages": ["extends outdoor-use season", "reduces direct precipitation exposure", "can create a buffered microclimate zone", "available as portable PVC, double-layer or glass direction"],
+      "model_examples": ["ROOFS 187 m²", "ROOFS 306 m²", "ROOFS 399 m²", "ROOFS 623 m²", "ROOFS 1167 m²", "Ø40 m", "Ø80 m"],
+      "project_start": ["define what must be covered", "send site/house dimensions", "define clearance and access", "choose envelope direction", "check snow/wind/drainage/ventilation", "select model range", "prepare project-specific foundation/engineering"],
+      "verification_notes": ["use-case cards and current CALC preset diameters are not always identical", "thermal savings and snow behavior must not be promised without project analysis"]
+    },
+    {
+      "id": "MONOLIT",
+      "name": "CONCRETE / SHOTCRETE DOMES",
+      "what_it_is": "Concrete or shotcrete shell dome family for residential shells, landscape-integrated houses and larger concrete dome concepts.",
+      "best_for": ["single shell house", "forest residence", "residential complex", "green-roof dome", "special concrete structure after engineering study"],
+      "how_it_differs": "The load-bearing envelope is a monolithic shell system with waterproofing/drainage and, where designed, a green-roof/external landscape layer.",
+      "source_advantages": ["continuous shell expression", "can integrate into landscape", "supports green-roof architectural direction"],
+      "model_examples": ["Ø8.5 m", "Ø9.5 m", "Ø10 m", "Ø11 m"],
+      "project_start": ["define use and site", "define shell size and openings", "choose foundation/shell concept", "solve waterproofing and drainage", "define green-roof/load layers if used", "prepare structural/project documentation", "plan shotcrete/concrete execution and QC"],
+      "verification_notes": ["special bunkers/storage/large concrete structures are custom engineering, not standard residential presets", "current Ø10 source revision has a known geometry conflict requiring resolution before exact lock"]
+    },
+    {
+      "id": "CRYSTAL_DOME",
+      "name": "CRYSTAL DOME / MICRO PODS",
+      "what_it_is": "Small-format approximately 7 m² dome capsule/pod family that can scale from one unit to Duo/Trio, Tree Village, Lakefront or micro-resort configurations.",
+      "best_for": ["sleeping pod", "micro retreat", "lakefront unit", "tree-home concept", "small resort cluster", "SPA pod concept"],
+      "how_it_differs": "Much smaller and faster-format than a full GLAMP residence; designed as a repeatable capsule ecosystem with shared decks/services possible.",
+      "source_advantages": ["small footprint", "strong visual identity", "easy to compose into clusters", "supports multiple function variants"],
+      "model_examples": ["Crystal Pod", "Duo", "Trio", "Tree Village", "Lakefront", "SPA Pod"],
+      "project_start": ["define pod function", "choose ground/elevated/tree/waterfront context", "define utilities", "define access/platform", "select single or cluster configuration", "verify foundation/uplift/local permissions"],
+      "verification_notes": ["support legs/platform/uplift are project-specific", "commercial baseline and lead times require current quotation confirmation"]
+    },
+    {
+      "id": "NATURAL_HOME",
+      "name": "NATURAL / REED-CLAD DOME HOMES",
+      "what_it_is": "Dome-home direction where natural reed cladding completes a layered residential envelope and integrates the building into the landscape.",
+      "best_for": ["nature residence", "eco-oriented premium home", "small residential village", "landscape-integrated project"],
+      "how_it_differs": "The architectural identity is driven by a layered sealed shell plus natural reed exterior, rather than exposed glass or membrane aesthetics.",
+      "source_advantages": ["natural landscape integration", "layered envelope concept", "can scale from one house to a coherent settlement"],
+      "model_examples": ["DOME HOME 90", "DOME HOME 120"],
+      "project_start": ["define use/site", "choose base model", "define shell and waterproof layers", "design reed facade system", "solve warm interior/envelope", "prepare engineering and local project documents"],
+      "verification_notes": ["thermal, fire, moisture and durability performance depend on verified layer build-up and local design"]
+    },
+    {
+      "id": "INFINITY",
+      "name": "MIRROR INFINITY DOME™",
+      "what_it_is": "Dedicated immersive visitor-experience platform based on a specific geodesic dome, synchronized light/media control and operator business model.",
+      "best_for": ["paid immersive attraction", "public/event location", "360×180 spherical cinema mode", "licensed operator venue"],
+      "how_it_differs": "It is not sold as a generic dome shell; it is an experience/business platform with content, control, session flow and licensing logic.",
+      "source_advantages": ["same infrastructure can support multiple experience modes", "operator receives a system rather than only a structure", "content can change without rebuilding the dome"],
+      "model_examples": ["Mirror Infinity Dome™ 12M"],
+      "project_start": ["qualify location", "estimate visitor flow", "confirm operator model", "define site/utility/permit constraints", "agree licensing and responsibilities", "install/calibrate system", "launch and operate sessions"],
+      "verification_notes": ["visitor capacity, operating hours, commercial projections and license terms must be confirmed in current offer/contract", "do not substitute generic HOME/GLAZED geometry for the dedicated platform"]
+    }
+  ],
+  "routing_only_categories": [
+    {"id":"EDUCATION","name":"Outdoor classrooms / education domes","status":"routing_only","note":"Public GEODOMAS site exposes this direction; detailed canonical model/training pack is not yet included in this V1 ontology."},
+    {"id":"EVENT","name":"Pavilions / stages / event domes","status":"routing_only","note":"Public GEODOMAS site exposes this direction; detailed canonical model/training pack is not yet included in this V1 ontology."},
+    {"id":"TECHNICAL_PACKAGES","name":"Nodes / engineering / documentation packages","status":"routing_only","note":"Technical package category exists, but production know-how and project-specific engineering remain private/controlled."}
+  ],
+  "package_layers": [
+    {"id":"SHELL","meaning":"base structural/envelope starting scope; exact inclusion depends on product family"},
+    {"id":"COMFORT","meaning":"living/comfort-oriented package direction above basic shell; exact inclusion depends on product family"},
+    {"id":"PREMIUM","meaning":"higher-completeness/premium design package direction; exact inclusion depends on product family"},
+    {"id":"GLAMPING_PRO","meaning":"all-season / business-oriented glamping completion direction; final performance remains project-specific"}
+  ]
+}
