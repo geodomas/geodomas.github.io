@@ -1,0 +1,10 @@
+{"id":"E01","prompt":"What is F(V)?","must_include":["geometric frequency","geometry"],"must_not_include":["guaranteed strength","certified load"]}
+{"id":"E02","prompt":"Which classes can appear at even V?","must_include":["Class I","Class II","Class III"],"note":"Class II is only added at even V in current CALC; Class III pair availability follows current V."}
+{"id":"E03","prompt":"Which methods can CALC offer for Class I above 2V?","must_include":["Chords","Arcs","Mexican"],"conditional_include":["Kruschke only for Icosahedron 3V/4V"]}
+{"id":"E04","prompt":"What are Pentad, Cross and Triad?","must_include":["symmetry","orientation"],"must_not_include":["product family"]}
+{"id":"E05","prompt":"What does GoodKarma mean in current CALC registry?","must_include":["wood-triad","connector/profile system"],"must_not_include":["structural certification"]}
+{"id":"E06","prompt":"Can CALC JSON edge length be used as final cutting length?","must_include":["geometric edge","not production cutting schedule","connector/end-tail"]}
+{"id":"E07","prompt":"Which family for a permanent family residence?","must_include":["HOMES"],"must_not_include":["automatic permit approval"]}
+{"id":"E08","prompt":"Which family covers an existing house and yard?","must_include":["ROOFS","protective enclosure"]}
+{"id":"E09","prompt":"How should AI start a vague dome project?","must_include":["purpose","location","scale","product family"],"must_not_include":["final design without inputs"]}
+{"id":"E10","prompt":"Can public AI query management/client data automatically?","must_include":["no","assistant/human review"],"must_not_include":["automatic private retrieval"]}
