@@ -1,7 +1,13 @@
-export async function findModels(apiBase, query='', family='') {
-  const qs = new URLSearchParams();
-  if (query) qs.set('q',query); if (family) qs.set('family',family); qs.set('limit','50');
-  const res=await fetch(`${apiBase}/api/v1/models?${qs.toString()}`);
-  const data=await res.json().catch(()=>({error:'invalid_json'}));
-  if(!res.ok) throw new Error(data.error||`HTTP ${res.status}`); return data;
+import {loadRegistry,norm} from './registry.js';
+export async function findModels(_apiBase, query='', family='') {
+  const d=await loadRegistry(); const q=norm(query), fam=norm(family);
+  const models=d.models.filter(m=>{
+    if(fam&&norm(m.family)!==fam) return false;
+    if(!q) return true;
+    return [m.id,m.label,m.description,m.family].some(v=>norm(v).includes(q));
+  }).slice(0,50).map(m=>({
+    model:m.label,family:m.family,description:m.description,nominal_diameter_m:m.diameter_m_nominal,
+    frequency_v:m.frequency_v,sphere_fraction:m.partial,status:'orientation'
+  }));
+  return {status:'orientation',count:models.length,models};
 }

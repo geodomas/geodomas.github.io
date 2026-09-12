@@ -1,4 +1,5 @@
-export async function getFrameSummary(apiBase, model) {
-  const res=await fetch(`${apiBase}/api/v1/frame-summary`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model})});
-  const data=await res.json().catch(()=>({error:'invalid_json'})); if(!res.ok) throw new Error(data.error||`HTTP ${res.status}`); return data;
+import {findModel} from './registry.js';
+export async function getFrameSummary(_apiBase, model) {
+  const m=await findModel(model);
+  return {model:m.label,family:m.family,status:'orientation',frame:{frequency_v:m.frequency_v,connection_family:m.connection_token,profile_token:m.beam_token,subdivision_class:m.subdiv_class,subdivision_method:m.subdiv_method,symmetry:m.symmetry},assumptions:['Profile/connection values are public-safe source tokens, not verified alloy/grade/wall-thickness certification.','Chord lengths, quantities, cutting angles and BOM are intentionally withheld unless generated from the exact CALC mesh contract.'],engineering_required:true,next_step:'For a production-grade member schedule, request the exact CALC configuration/export and engineering validation.'};
 }
