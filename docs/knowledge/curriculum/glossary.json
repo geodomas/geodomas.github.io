@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "terms": [
+    {"term":"F(V)","public_definition":"GEODOMAS CALC label for geometric frequency/detail.","do_not_claim":"Do not infer structural capacity from F(V) alone."},
+    {"term":"Class I","public_definition":"A subdivision class available in the current CALC class builder."},
+    {"term":"Class II","public_definition":"A subdivision class offered by current CALC when the selected frequency V is even."},
+    {"term":"Class III M,N","public_definition":"CALC subdivision-class notation using an M,N pair; current generator uses S=M²+M·N+N² for the scheme size."},
+    {"term":"Chords","public_definition":"Current CALC Equal Chords subdivision method identifier."},
+    {"term":"Arcs","public_definition":"Current CALC Equal Arcs method; offered for Class I above 2V."},
+    {"term":"Mexican","public_definition":"Current CALC subdivision method; offered for Class I above 2V."},
+    {"term":"Kruschke","public_definition":"Current CALC method offered for Icosahedron + Class I at 3V or 4V."},
+    {"term":"Pentad","public_definition":"A current CALC symmetry/orientation label."},
+    {"term":"Cross","public_definition":"A current CALC symmetry/orientation label."},
+    {"term":"Triad","public_definition":"A current CALC symmetry/orientation label."},
+    {"term":"partial","public_definition":"CALC state describing a sphere/dome part rather than a full sphere."},
+    {"term":"alignTheBase","public_definition":"CALC state for aligning the 3D model base."},
+    {"term":"Piped","public_definition":"CALC connector/profile-system registry item in the glamping group."},
+    {"term":"GoodKarma","public_definition":"CALC connector/profile-system registry item in the wood-triad group."},
+    {"term":"Semicone","public_definition":"CALC connector/profile-system registry item in the aluminum-triad group."},
+    {"term":"Cone","public_definition":"CALC connector/profile-system registry item in the mixed-materials group."},
+    {"term":"CALC JSON mesh","public_definition":"A GEODOMAS CALC export containing public geometry metadata, vertices, triangles and edges for deterministic analysis.","do_not_claim":"Not automatically a production BOM or structural certificate."},
+    {"term":"Product family","public_definition":"A GEODOMAS product direction selected by use/function before exact project engineering."},
+    {"term":"Project","public_definition":"A site/use-specific realization requiring scope, engineering, documentation and responsibility boundaries beyond a geometry preset."}
+  ]
+}

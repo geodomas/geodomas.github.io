@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "status": "public_orientation",
+  "universal_start": {
+    "title": "How to start a GEODOMAS project",
+    "steps": [
+      {
+        "step": 1,
+        "name": "Purpose",
+        "ask": [
+          "What will happen inside?",
+          "Private, hospitality, office, event, protective roof or immersive business?"
+        ]
+      },
+      {
+        "step": 2,
+        "name": "Location",
+        "ask": [
+          "Country/city",
+          "plot or existing object",
+          "terrain/access",
+          "climate exposure"
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Scale",
+        "ask": [
+          "target diameter/area",
+          "occupancy",
+          "number of units",
+          "single building or campus"
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Product family",
+        "ask": [
+          "GLAMPING, HOMES, GLAZED, ROOFS, MONOLIT, CRYSTAL, NATURAL HOME or INFINITY?"
+        ]
+      },
+      {
+        "step": 5,
+        "name": "Geometry",
+        "ask": [
+          "select current catalog/CALC route",
+          "do not substitute a nearby diameter without confirmation"
+        ]
+      },
+      {
+        "step": 6,
+        "name": "Envelope and systems",
+        "ask": [
+          "transparent/opaque ratio",
+          "insulation",
+          "ventilation",
+          "doors/windows",
+          "MEP",
+          "interior level"
+        ]
+      },
+      {
+        "step": 7,
+        "name": "Documentation route",
+        "ask": [
+          "concept only",
+          "permit project",
+          "technical project",
+          "special/expert review if required"
+        ]
+      },
+      {
+        "step": 8,
+        "name": "Engineering verification",
+        "ask": [
+          "loads",
+          "foundation",
+          "connections",
+          "facade/envelope",
+          "local standards"
+        ]
+      },
+      {
+        "step": 9,
+        "name": "Production/logistics/installation",
+        "ask": [
+          "kit scope",
+          "delivery",
+          "site handling",
+          "assembly responsibility",
+          "local works"
+        ]
+      },
+      {
+        "step": 10,
+        "name": "Commercial scope",
+        "ask": [
+          "what GEODOMAS supplies",
+          "what local designer/contractor/client supplies",
+          "product price vs total project cost"
+        ]
+      }
+    ]
+  },
+  "minimum_client_brief": [
+    "country/city",
+    "site address or map pin",
+    "intended use",
+    "target size/area",
+    "expected occupancy",
+    "number of units",
+    "seasonal or all-year use",
+    "desired envelope/material direction",
+    "desired project stage",
+    "target timeline/budget range if known"
+  ],
+  "project_definition": {
+    "principle": "IDEA → STRUCTURE → BLUEPRINT → BUILD",
+    "operational_route": [
+      "INQUIRY",
+      "QUALIFICATION",
+      "PROJECT DEFINITION",
+      "APPROVED PRODUCT",
+      "ENGINEERING",
+      "SUPPLY",
+      "BUILD"
+    ],
+    "meaning": "Project Definition converts a vague idea or catalog direction into an agreed product identity, scope split, interfaces, assumptions and next engineering/commercial gates.",
+    "important": "It is not the same thing as a permit-ready design, final engineering or a total-project price."
+  },
+  "live_ai_assistant": "https://chat.geodomas.lt/"
+}
