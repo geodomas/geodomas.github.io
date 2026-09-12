@@ -1,24 +1,14 @@
 # GEODOMAS Public Lab — security boundary
 
 ## Public deterministic tools
-Only explicit, purpose-built scripts may be automated. V1 contains:
+Only explicit, purpose-built deterministic scripts may be automated in Public Lab: model discovery/specification, geometry/frame summaries and user-supplied CALC mesh analysis.
 
-- `model-spec.js` — calls only `/api/v1/model-spec`;
-- `ask-geodomas.js` — submits a question for assistant review only.
+## AI Assistant handoff
+Project dialogue is not proxied through the Public Lab backend. Every conversational CTA routes to the separate live service:
 
-## Forbidden from public automation
-A public request must never automatically open or search:
+`https://chat.geodomas.lt/`
 
-- private operational records;
-- client/email records;
-- private pricing or margins;
-- unrestricted internal specialist workspaces;
-- server filesystem paths;
-- internal prompts/routing traces;
-- credentials or environment secrets.
-
-## Assistant boundary
-ASK GEODOMAS is human/assistant mediated. The gateway stores/queues the public question. A controlled assistant chooses approved context, filters the answer, and only then may an answer be exposed publicly.
+Public Lab therefore does not automatically open, query or forward private operational records, client/email records, private pricing/margins, unrestricted specialist workspaces, server filesystem paths, internal prompts/routing traces or credentials.
 
 ## Calculator boundary
 Calculator/model scripts are allowed only when their input/output contract is explicit and the source dataset has been approved for public exposure. Geometry output is not structural certification.

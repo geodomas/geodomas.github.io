@@ -127,5 +127,6 @@
     ],
     "meaning": "Project Definition converts a vague idea or catalog direction into an agreed product identity, scope split, interfaces, assumptions and next engineering/commercial gates.",
     "important": "It is not the same thing as a permit-ready design, final engineering or a total-project price."
-  }
+  },
+  "live_ai_assistant": "https://chat.geodomas.lt/"
 }

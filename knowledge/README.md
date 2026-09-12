@@ -10,3 +10,6 @@ Designed for people and AI systems. It is a static, public-safe projection — n
 5. `ai_training_corpus.jsonl` — compact supervised examples.
 
 The pack intentionally excludes client data, private prices/margins, detailed production BOM/cutting logic, credentials, internal prompts and unsupported technical/certification claims.
+
+## Live AI Assistant
+Conversational/project questions continue at `https://chat.geodomas.lt/`. Public Lab is not an AI proxy.

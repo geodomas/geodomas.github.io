@@ -560,5 +560,6 @@
     "PROJECT_SPECIFIC": "Requires site/project engineering, commercial, legal or responsible-human verification.",
     "DENY_IN_PUBLIC": "Private production logic, client data, internal pricing/margins, credentials, detailed cutting/BOM and unsupported certification claims are not exposed."
   },
-  "public_snapshot_sha256": "c8e8c9a3fc04c27196d6e968cd1b0f3db06a7f885b33ab1d071050c9e612caa6"
+  "public_snapshot_sha256": "c8e8c9a3fc04c27196d6e968cd1b0f3db06a7f885b33ab1d071050c9e612caa6",
+  "live_ai_assistant": "https://chat.geodomas.lt/"
 }

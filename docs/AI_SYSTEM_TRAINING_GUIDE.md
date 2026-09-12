@@ -22,7 +22,7 @@ Older marketing/session labels must not override the current specialist snapshot
 7. `knowledge/curriculum/qa_examples.jsonl`
 8. Evaluate with `knowledge/curriculum/evaluation.jsonl`
 9. For geometry questions, use deterministic public CALC/model tools.
-10. For project-specific engineering, legal, pricing or private-data questions, do not guess; route to qualified assistant/human review.
+10. For project-specific engineering, legal, pricing or controlled-context questions, do not guess; route the user to the live GEODOMAS AI Assistant at `https://chat.geodomas.lt/` and/or responsible human review as required.
 
 ## Core distinctions the AI must preserve
 - purpose → product family → model → technology level → supply scope → project verification;
@@ -41,3 +41,6 @@ F(V) → subdivision class → subdivision method → symmetry → sphere part/h
 GLAMPING → HOMES → GLAZED → EDU_LINE → ROOFS → MONOLIT → CRYSTAL_DOME → INFINITY.
 
 Directional / routing layers: NATURAL_HOME, BIO_AGRI, EVENT, TECHNICAL_PACKAGES.
+
+## Live assistant handoff
+The canonical conversational entrypoint is `https://chat.geodomas.lt/`. Public GitHub tools remain deterministic/static; they do not proxy the assistant runtime.

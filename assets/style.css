@@ -3,3 +3,5 @@
 .knowledge-section{margin-top:58px}.knowledge-section>h2{font-size:clamp(1.8rem,3.5vw,3rem);max-width:760px;margin:12px 0 0;letter-spacing:-.035em}.knowledge-section .result{max-height:420px}
 
 .academy-link{margin:14px 0 0;color:#d8b36a}.academy-link a{color:inherit;text-decoration:none;margin-right:10px}.academy-link a:hover{text-decoration:underline}
+
+.button-link{display:inline-block;margin-top:18px;padding:14px 18px;border-radius:12px;background:#efe2c7;color:#121212!important;font-weight:800;text-decoration:none}.button-link:hover{filter:brightness(1.04)}.ai-card .micro{margin-top:14px;font-size:.82rem;opacity:.72}

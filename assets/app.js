@@ -2,7 +2,6 @@ import {findModels} from './tools/model-finder.js';
 import {getModelSpec} from './tools/model-spec.js';
 import {getGeometrySummary} from './tools/geometry-summary.js';
 import {getFrameSummary} from './tools/frame-summary.js';
-import {submitAssistantQuestion} from './tools/ask-geodomas.js';
 import {analyzeCalcMesh} from './tools/mesh-summary.js';
 import {loadProductOntology,loadProjectGuide} from './tools/knowledge.js';
 const cfg=window.GEODOMAS_PUBLIC_CONFIG||{apiBase:''}; const $=s=>document.querySelector(s);
@@ -13,7 +12,6 @@ run($('#spec-form'),$('#spec-output'),()=>getModelSpec(cfg.apiBase,$('#model').v
 run($('#geometry-form'),$('#geometry-output'),()=>getGeometrySummary(cfg.apiBase,$('#geometry-model').value.trim()));
 run($('#frame-form'),$('#frame-output'),()=>getFrameSummary(cfg.apiBase,$('#frame-model').value.trim()));
 run($('#mesh-form'),$('#mesh-output'),()=>analyzeCalcMesh(cfg.apiBase,$('#mesh-file').files[0]));
-run($('#ask-form'),$('#ask-output'),()=>submitAssistantQuestion(cfg.apiBase,$('#question').value.trim(),$('#ask-lang').value));
 
 async function bootKnowledge(){
   try{
