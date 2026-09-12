@@ -1,13 +1,12 @@
 # GEODOMAS Public Knowledge Pack
 
-This directory is designed for two readers at the same time:
+Designed for people and AI systems. It is a static, public-safe projection — not a live connector to private GEODOMAS data.
 
-1. people learning what GEODOMAS product families are;
-2. AI systems that need a clean, public-safe ontology before answering questions about GEODOMAS technology.
+## Current public truth order
+1. `iskra_public_snapshot.json` — reviewed current specialist projection.
+2. `product_ontology.json` — narrative product ontology aligned to the snapshot.
+3. `project_start_guides.json` + `project_router.json` — deterministic public routing and project-start logic.
+4. `curriculum/` — technical AI curriculum, glossary, Q&A and evaluation.
+5. `ai_training_corpus.jsonl` — compact supervised examples.
 
-Files:
-- `product_ontology.json` — product families, differences, use cases, advantages, model examples, boundaries;
-- `project_start_guides.json` — universal project-start sequence and minimum client brief;
-- `ai_training_corpus.jsonl` — compact supervised examples for routing and safety boundaries.
-
-The pack contains public orientation only. It intentionally excludes proprietary production BOM, cutting logic, client data, private prices/margins, internal prompts and unrestricted server knowledge.
+The pack intentionally excludes client data, private prices/margins, detailed production BOM/cutting logic, credentials, internal prompts and unsupported technical/certification claims.

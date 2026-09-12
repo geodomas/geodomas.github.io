@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "deterministic_public_orientation",
+  "rule": "Route by intended function first; exact model, technology and engineering come later.",
+  "routes": [
+    {"id":"hospitality","label":"Glamping / resort accommodation","family":"GLAMPING","why":"Repeatable guest/hospitality product system from compact units to large resort spaces."},
+    {"id":"home","label":"Permanent or seasonal home","family":"HOMES","why":"Residential planning, household program, comfort and project/permit route are the primary drivers."},
+    {"id":"glass_building","label":"Office / HQ / public glass building","family":"GLAZED","why":"Building-grade aluminium-glass or glass-composite architecture with facade/energy/MEP engineering."},
+    {"id":"education","label":"School / outdoor classroom / learning space","family":"EDU_LINE","why":"Education-specific product identity with membrane/transparent and separate glass EDU branches."},
+    {"id":"protective_roof","label":"Cover an existing house, yard or modular complex","family":"ROOFS","why":"The dome acts as a protective environmental enclosure around/above another object."},
+    {"id":"concrete","label":"Monolithic / shotcrete residence or retreat","family":"MONOLIT","why":"Continuous concrete/shotcrete shell with waterproofing, drainage and landscape integration logic."},
+    {"id":"micro_pod","label":"Small pod / tree / lakefront capsule","family":"CRYSTAL_DOME","why":"Compact approximately Ø3 m / 7 m² configurable capsule ecosystem."},
+    {"id":"immersive","label":"Immersive attraction / 360×180 experience","family":"INFINITY","why":"Physical + digital visitor platform with content, control and operator workflow."},
+    {"id":"natural_home","label":"Natural / reed-clad dome-home direction","family":"NATURAL_HOME","why":"Public directional family; current specialist pack must be locked before exact technical routing."},
+    {"id":"greenhouse","label":"Greenhouse / agriculture / BIO","family":"BIO_AGRI","why":"Routing direction only; material, climate and cultivation system are project-specific."}
+  ],
+  "next_questions": ["Where is the project?", "What is the intended use?", "How many people/units?", "What size/area is targeted?", "Seasonal or all-year?", "What envelope direction is preferred?", "What project stage is needed?"],
+  "boundary": "This router does not select a final structural model, approve permits, calculate loads or create a binding price."
+}

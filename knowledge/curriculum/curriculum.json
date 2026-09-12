@@ -7,7 +7,8 @@
     "product_families": "public GEODOMAS product pages + public product ontology",
     "calc_terms": "current calc.geodomas.lt runtime/config/code contracts",
     "project_process": "GEODOMAS public project-start guide",
-    "engineering_boundary": "public orientation only; project-specific verification remains required"
+    "engineering_boundary": "public orientation only; project-specific verification remains required",
+    "specialist_overlay": "knowledge/iskra_public_snapshot.json — current curated public-safe specialist projection; higher priority than older model examples."
   },
   "learning_order": [
     "M01_SYSTEM",
@@ -30,33 +31,51 @@
       "id": "M01_SYSTEM",
       "title": "GEODOMAS is a product system, not only a dome shape",
       "level": "foundation",
-      "objectives": ["separate geometry from product and project", "separate product package from total project scope", "understand the lifecycle sequence"],
+      "objectives": [
+        "separate geometry from product and project",
+        "separate product package from total project scope",
+        "understand the lifecycle sequence"
+      ],
       "facts": [
         "A geometry preset is not a finished building.",
         "A finished GEODOMAS project may include product family selection, geometry, structure, envelope, openings, foundation/interface, building services, documentation, production, logistics, installation and operation.",
         "Catalog/product information does not replace site-specific engineering or local project requirements."
       ],
-      "common_mistakes": ["answering a building question from diameter alone", "treating a frame price as total project cost", "treating public geometry as structural approval"],
+      "common_mistakes": [
+        "answering a building question from diameter alone",
+        "treating a frame price as total project cost",
+        "treating public geometry as structural approval"
+      ],
       "pass_condition": "AI can explain the difference between geometry, product family, package, and project."
     },
     {
       "id": "M02_PRODUCTS",
       "title": "GEODOMAS product families and routing",
       "level": "foundation",
-      "objectives": ["recognize current public product families", "route use cases to the right family", "explain high-level differences without inventing technical performance"],
-      "facts": [
-        "The V1 public ontology contains GLAMPING, HOMES, GLAZED, ROOFS, MONOLIT, CRYSTAL_DOME, NATURAL_HOME and INFINITY.",
-        "EDUCATION, EVENT and TECHNICAL_PACKAGES are currently routing-only categories in V1.",
-        "Product-family selection starts from intended use before exact geometry."
+      "objectives": [
+        "recognize current public product families",
+        "route use cases to the right family",
+        "explain high-level differences without inventing technical performance"
       ],
-      "depends_on": ["knowledge/product_ontology.json"],
+      "facts": [
+        "The current specialist-backed public snapshot contains GLAMPING, HOMES, GLAZED, ROOFS, MONOLIT, CRYSTAL_DOME, EDU_LINE and INFINITY.",
+        "NATURAL_HOME remains a public directional family until a current specialist pack is locked; BIO_AGRI, EVENT and TECHNICAL_PACKAGES are routing/controlled directions.",
+        "Product-family selection starts from intended use before exact geometry.",
+        "Current specialist snapshot overrides older session model labels when they conflict."
+      ],
+      "depends_on": [
+        "knowledge/product_ontology.json"
+      ],
       "pass_condition": "AI routes a user by use case and states what remains to be verified."
     },
     {
       "id": "M03_GEOMETRY_VOCABULARY",
       "title": "CALC geometry vocabulary",
       "level": "technical_foundation",
-      "objectives": ["read current CALC geometry fields", "distinguish base polyhedron, frequency, class, method, symmetry, partial and radius"],
+      "objectives": [
+        "read current CALC geometry fields",
+        "distinguish base polyhedron, frequency, class, method, symmetry, partial and radius"
+      ],
       "facts": [
         "Current CALC public/runtime terminology includes Icosahedron and Octahedron base geometry, geometric frequency F(V), subdivision class, subdivision method, symmetry, sphere part/dome height, base alignment, radius and frame profile system.",
         "A CALC model identity can include multiple fields; diameter or frequency alone is not a complete identity."
@@ -67,7 +86,10 @@
       "id": "M04_FREQUENCY",
       "title": "Geometric frequency F(V)",
       "level": "technical_foundation",
-      "objectives": ["recognize F(V) as a CALC detail/frequency parameter", "avoid equating frequency alone with strength or product quality"],
+      "objectives": [
+        "recognize F(V) as a CALC detail/frequency parameter",
+        "avoid equating frequency alone with strength or product quality"
+      ],
       "facts": [
         "CALC labels the detail parameter as Geometric frequency F(V).",
         "The current runtime generates general detail options 1 through 18; fullerene mode uses 1 through 8.",
@@ -80,21 +102,32 @@
       "id": "M05_SUBDIVISION_CLASSES",
       "title": "Subdivision Classes I, II and III",
       "level": "technical",
-      "objectives": ["recognize class identifiers used by CALC", "understand availability constraints", "read Class III M,N identifiers"],
+      "objectives": [
+        "recognize class identifiers used by CALC",
+        "understand availability constraints",
+        "read Class III M,N identifiers"
+      ],
       "facts": [
         "Class I is always present in the current class option builder.",
         "Class II is added when V is even.",
         "Class III options are represented as III_M,N pairs derived from the selected frequency.",
         "The current Class III generator uses S = M² + M·N + N² internally for its subdivision scheme size."
       ],
-      "common_mistakes": ["describing Class II or III as universally better than Class I", "ignoring the selected V when naming a Class III pair"],
+      "common_mistakes": [
+        "describing Class II or III as universally better than Class I",
+        "ignoring the selected V when naming a Class III pair"
+      ],
       "pass_condition": "AI can identify class syntax and availability without inventing a quality ranking."
     },
     {
       "id": "M06_SUBDIVISION_METHODS",
       "title": "Subdivision methods supported by current CALC",
       "level": "technical",
-      "objectives": ["know current method names", "know runtime availability rules", "avoid unsupported superiority claims"],
+      "objectives": [
+        "know current method names",
+        "know runtime availability rules",
+        "avoid unsupported superiority claims"
+      ],
       "facts": [
         "Equal Chords (Chords) is the base method option in the current runtime.",
         "For Class I with frequency above 2, Equal Arcs (Arcs) and Mexican are additionally offered.",
@@ -107,7 +140,10 @@
       "id": "M07_SYMMETRY",
       "title": "Pentad, Cross and Triad symmetry",
       "level": "technical",
-      "objectives": ["recognize the three symmetry labels", "understand symmetry as model orientation/topology context rather than a product family"],
+      "objectives": [
+        "recognize the three symmetry labels",
+        "understand symmetry as model orientation/topology context rather than a product family"
+      ],
       "facts": [
         "Current CALC symmetry labels are Pentad, Cross and Triad.",
         "The geometry runtime uses different orientation transforms for these symmetry selections.",
@@ -119,7 +155,11 @@
       "id": "M08_PARTIAL_AND_BASE",
       "title": "Sphere part, dome height and base alignment",
       "level": "technical",
-      "objectives": ["understand partial-sphere selection", "recognize height mode and align-the-base state", "avoid approximating aligned geometry from nominal radius alone"],
+      "objectives": [
+        "understand partial-sphere selection",
+        "recognize height mode and align-the-base state",
+        "avoid approximating aligned geometry from nominal radius alone"
+      ],
       "facts": [
         "CALC contains sphere-part / dome-height state, including partial, partialHeight and partialMode concepts.",
         "The viewer/runtime uses a height relation consistent with baseY = 1 - 2 × partialHeight in height mode.",
@@ -132,7 +172,11 @@
       "id": "M09_FRAME_PROFILE_SYSTEMS",
       "title": "Frame profile / connector families",
       "level": "technical",
-      "objectives": ["recognize current connector registry", "route connector labels to their intended CALC groups", "keep fabrication details private"],
+      "objectives": [
+        "recognize current connector registry",
+        "route connector labels to their intended CALC groups",
+        "keep fabrication details private"
+      ],
       "facts": [
         "Current connector registry contains Piped, GoodKarma, Semicone, Cone, Joint and Nose.",
         "Registry groups: Piped → glamping; GoodKarma → wood-triad; Semicone → aluminum-triad; Cone → mixed-materials; Joint → joint; Nose → fullerene.",
@@ -146,7 +190,11 @@
       "id": "M10_CALC_WORKFLOW",
       "title": "How to use GEODOMAS CALC in the public workflow",
       "level": "applied",
-      "objectives": ["know what CALC is authoritative for", "know which public tools can consume CALC data", "preserve exact model state"],
+      "objectives": [
+        "know what CALC is authoritative for",
+        "know which public tools can consume CALC data",
+        "preserve exact model state"
+      ],
       "facts": [
         "GEODOMAS CALC is the public geometry kernel used to configure and inspect dome geometry.",
         "The public contract includes normalized calculator state fields such as hash, connection type/profile, radius, frequency, partial state, partial height, base alignment and fullerene flag.",
@@ -159,7 +207,10 @@
       "id": "M11_MESH_AND_EXPORTS",
       "title": "CALC mesh/export data",
       "level": "applied",
-      "objectives": ["understand JSON mesh structure", "separate geometric chord data from production cutting data"],
+      "objectives": [
+        "understand JSON mesh structure",
+        "separate geometric chord data from production cutting data"
+      ],
       "facts": [
         "Current CALC JSON export includes metadata, vertices, triangles and edges.",
         "Edges include geometric length and adjacent triangle references; triangles include area/perimeter/centroid-related data in the export logic.",
@@ -172,19 +223,29 @@
       "id": "M12_PROJECT_START",
       "title": "Starting a glamping, house, office or roof project",
       "level": "applied",
-      "objectives": ["collect a minimum brief", "choose family before exact model", "sequence project decisions"],
+      "objectives": [
+        "collect a minimum brief",
+        "choose family before exact model",
+        "sequence project decisions"
+      ],
       "facts": [
         "The public start sequence is Purpose → Location → Scale → Product family → Geometry → Envelope/systems → Documentation route → Engineering verification → Production/logistics/installation → Commercial scope.",
+        "A Project Definition step converts an idea into an agreed product identity, scope split, interfaces and assumptions before final engineering/supply.",
         "Minimum public brief includes location, intended use, target size/area, occupancy, number of units, seasonal/all-year intent, envelope direction, desired project stage, and timeline/budget range if known."
       ],
-      "depends_on": ["knowledge/project_start_guides.json"],
+      "depends_on": [
+        "knowledge/project_start_guides.json"
+      ],
       "pass_condition": "AI can turn a vague idea into a structured project brief without promising a final design."
     },
     {
       "id": "M13_ENGINEERING_BOUNDARIES",
       "title": "What public AI must not certify",
       "level": "safety",
-      "objectives": ["recognize claim boundaries", "escalate correctly"],
+      "objectives": [
+        "recognize claim boundaries",
+        "escalate correctly"
+      ],
       "facts": [
         "Public geometry/model data does not certify snow/wind resistance, foundations, connector strength, material grade, fire performance, thermal performance, energy class, waterproofing, local permit compliance, warranty, price, lead time or installation scope.",
         "These claims require a current project source, engineering calculation/test, offer/contract or responsible human approval depending on the claim."
@@ -195,7 +256,11 @@
       "id": "M14_AI_RESPONSE_PROTOCOL",
       "title": "How a public GEODOMAS-trained AI should answer",
       "level": "safety",
-      "objectives": ["answer in layers", "separate verified facts from orientation", "protect private data"],
+      "objectives": [
+        "answer in layers",
+        "separate verified facts from orientation",
+        "protect private data"
+      ],
       "protocol": [
         "1. Identify user intent and product family.",
         "2. State public facts from ontology/CALC contracts.",
