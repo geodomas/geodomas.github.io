@@ -46,3 +46,39 @@ export async function bootStart(){
  document.querySelector('#definition').textContent=`${g.project_definition.principle}\n\n${g.project_definition.operational_route.join(' → ')}\n\n${g.project_definition.meaning}\n\n${g.project_definition.important}`;
  document.querySelector('#brief').innerHTML=g.minimum_client_brief.map(x=>`<li>${esc(x)}</li>`).join('');
 }
+
+function comparisonRoutes(f){
+ const direct=familyModels(f); if(direct.length)return direct.map(modelLabel);
+ if(f.diameter_routes_m)return f.diameter_routes_m.map(x=>`Ø${x} m route`);
+ if(f.standard_diameter_routes_m){const a=f.standard_diameter_routes_m.map(x=>`Ø${x} m`);if(f.special_project_routes_m?.length)a.push(`special Ø${f.special_project_routes_m[0]}–${f.special_project_routes_m.at(-1)} m`);return a;}
+ if(f.configurations)return f.configurations;
+ if(f.reference_model)return [modelLabel(f.reference_model)];
+ if(f.base_identity)return [`Ø${f.base_identity.diameter_m||'?'} m · ${f.base_identity.floor_area_m2_approx||'?'} m² approx.`];
+ return ['Project-routed configuration'];
+}
+function comparisonTech(f){
+ const t=f.technology_levels||f.technology_directions||f.facade_modes||f.configurations||[];
+ return t.map(x=>typeof x==='string'?x:`${x.id}: ${x.meaning}`);
+}
+function compareCard(f,label){
+ const routes=comparisonRoutes(f).slice(0,12),tech=comparisonTech(f).slice(0,10);
+ return `<article class="compare-card family-${slug(f.id)}"><div class="compare-card-image"><span>${esc(label)} · ${esc(f.id)}</span></div><div class="compare-card-head"><small>${esc(humanAuthority(f.authority))}</small><h2>${esc(f.title)}</h2><p>${esc(f.summary)}</p></div><div class="compare-block"><span>BEST FOR</span><ul>${(f.best_for||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="compare-block"><span>WHAT MAKES IT DIFFERENT</span><p>${esc(f.difference)}</p></div><div class="compare-block"><span>SAFE ADVANTAGES</span><ul>${(f.safe_advantages||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="compare-block"><span>PUBLIC MODEL / ROUTE ORIENTATION</span><div class="compare-models">${routes.map(x=>`<em>${esc(x)}</em>`).join('')}</div></div><div class="compare-block"><span>TECHNOLOGY / CONFIGURATION</span>${tech.length?`<ul>${tech.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p>Project-specific configuration.</p>'}</div><div class="compare-block"><span>START THE PROJECT</span><ul>${(f.project_start||[]).slice(0,6).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="compare-card-foot"><a href="family.html?id=${encodeURIComponent(f.id)}">Open ${esc(f.id)} family page →</a></div></article>`;
+}
+export async function bootCompare(){
+ chrome(); const snap=await j('../knowledge/iskra_public_snapshot.json'); const opts=snap.families.map(f=>`<option value="${esc(f.id)}">${esc(f.title)}</option>`).join('');
+ const a=document.querySelector('#compare-a'),b=document.querySelector('#compare-b');a.innerHTML=opts;b.innerHTML=opts;a.value='GLAMPING';b.value='HOMES';
+ const render=()=>{let fa=snap.families.find(x=>x.id===a.value),fb=snap.families.find(x=>x.id===b.value);if(fa?.id===fb?.id){const alt=snap.families.find(x=>x.id!==fa.id);fb=alt;b.value=alt.id;}document.querySelector('#compare-results').innerHTML=compareCard(fa,'FAMILY A')+compareCard(fb,'FAMILY B');};
+ document.querySelector('#compare-run').addEventListener('click',render);a.addEventListener('change',render);b.addEventListener('change',render);render();
+}
+function briefVal(id){const e=document.querySelector(id);return (e?.value||'').trim()||'Not defined';}
+function buildBrief(){
+ const family=document.querySelector('#brief-family'); const familyLabel=family?.selectedOptions?.[0]?.textContent||'Not selected';
+ return `GEODOMAS PROJECT BRIEF — PUBLIC ORIENTATION\n\nProject / reference: ${briefVal('#brief-name')}\nLocation / site: ${briefVal('#brief-location')}\nIntended use: ${briefVal('#brief-use')}\nProduct family direction: ${familyLabel}\nTarget size / area: ${briefVal('#brief-size')}\nPeople / occupancy: ${briefVal('#brief-occupancy')}\nNumber of units: ${briefVal('#brief-units')}\nSeasonality: ${briefVal('#brief-season')}\nEnvelope / material direction: ${briefVal('#brief-envelope')}\nDesired project stage: ${briefVal('#brief-stage')}\nTimeline: ${briefVal('#brief-timeline')}\nBudget range: ${briefVal('#brief-budget')}\n\nSITE / ACCESS / UTILITIES\n${briefVal('#brief-site')}\n\nMAIN QUESTION / DECISION NEEDED\n${briefVal('#brief-question')}\n\nREQUESTED GEODOMAS NEXT STEP\n1. Confirm or correct the product-family route.\n2. Identify missing Project Definition inputs.\n3. Separate public orientation from project-specific engineering/commercial/legal verification.\n4. Recommend the next responsible action.\n\nBOUNDARY\nThis browser-generated brief is not a technical design, structural verification, permit conclusion, binding price, lead-time promise or installation scope.`;
+}
+export async function bootBriefBuilder(){
+ chrome(); const snap=await j('../knowledge/iskra_public_snapshot.json'); const family=document.querySelector('#brief-family');family.innerHTML='<option value="">Not selected yet</option>'+snap.families.map(f=>`<option value="${esc(f.id)}">${esc(f.id)} — ${esc(f.title)}</option>`).join('');
+ const output=document.querySelector('#brief-output'),state=document.querySelector('#brief-state');
+ const generate=()=>{output.textContent=buildBrief();state.textContent='GENERATED LOCAL';};document.querySelector('#brief-generate').addEventListener('click',generate);
+ document.querySelector('#brief-form').addEventListener('reset',()=>setTimeout(()=>{output.textContent='Fill the project inputs, then generate the brief.';state.textContent='LOCAL ONLY';},0));
+ document.querySelector('#brief-copy').addEventListener('click',async e=>{if(!output.textContent||output.textContent.startsWith('Fill the project'))generate();const text=output.textContent;try{await navigator.clipboard.writeText(text);}catch(_){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();}const btn=e.currentTarget;const old=btn.textContent;btn.textContent='Copied ✓';btn.classList.add('copy-ok');setTimeout(()=>{btn.textContent=old;btn.classList.remove('copy-ok');},1800);});
+}
