@@ -1,1 +1,92 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GEODOMAS Product Academy</title><meta name="description" content="Learn GEODOMAS product families, project routing and public-safe technology logic."><link rel="stylesheet" href="assets/academy.css"></head><body><div class="shell"><header class="top"><a class="brand" href="../index.html">GEODOMAS</a><nav class="nav"><a href="index.html">Academy</a><a href="project-start.html">Start a Project</a><a href="ai-training.html">AI Training</a><a href="../index.html">Public Lab</a><a class="ai-nav" href="https://chat.geodomas.lt/">AI Assistant ↗</a></nav></header><main><section class="hero"><div class="eyebrow">PRODUCT ACADEMY · PUBLIC KNOWLEDGE</div><h1>Choose the system before the model.</h1><p>GEODOMAS is not one dome product. It is a set of product families with different functions, envelopes, project routes and engineering gates. This academy is a curated public-safe projection of current specialist knowledge — no live private-data access.</p><div id="logic" class="logic"></div></section><section class="section"><div class="eyebrow">01 · PRODUCT MAP</div><h2>Current specialist-backed families</h2><p class="intro">Start from purpose. Then choose the family, model range, technology level and supply scope. Exact engineering comes after the product identity is clear.</p><div id="families" class="grid"></div></section><section class="section"><div class="eyebrow">02 · ROUTER</div><h2>What are you trying to build?</h2><div class="router"><div class="panel"><label for="intent">Intended use</label><select id="intent"></select><button id="route-btn">Route project</button></div><pre id="route-result" class="result"></pre></div><p class="note">The router is deterministic and uses only the static public knowledge pack. It does not query clients, emails, private pricing, BOM or internal workspaces.</p></section></main></div><script type="module">import{bootIndex}from'./assets/academy.js';bootIndex();</script><a class="floating-ai" href="https://chat.geodomas.lt/">Ask GEODOMAS AI ↗</a></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GEODOMAS Product Academy — understand dome product families, project routes and public-safe technology logic.">
+  <meta name="theme-color" content="#f7f3ec">
+  <title>GEODOMAS Product Academy</title>
+  <link rel="stylesheet" href="assets/academy.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html" aria-label="GEODOMAS home">
+    <svg class="brand-mark" viewBox="0 0 80 72" aria-hidden="true"><path d="M40 3 9 20 4 52l22 16h28l22-16-5-32L40 3Zm0 0 14 17 17 0M40 3 26 20 9 20m17 0 14 17 14-17m-28 0L4 52m54-32 18 32M40 37 4 52m36-15 36 15M40 37 26 68m14-31 14 31M4 52h72" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    <span><strong>GEODOMAS</strong><small>PRODUCT ACADEMY</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+  <nav class="nav" aria-label="Academy navigation">
+    <a class="active" href="index.html">Academy</a>
+    <a href="project-start.html">Start a Project</a>
+    <a href="ai-training.html">AI Training</a>
+    <a href="https://calc.geodomas.lt/">CALC ↗</a>
+    <a href="../index.html#public-lab">Public Lab</a>
+    <a class="ai-nav" href="https://chat.geodomas.lt/"><span>✦</span> AI Assistant</a>
+  </nav>
+</header>
+
+<main>
+  <section class="academy-hero academy-hero-main">
+    <div class="hero-media hero-academy"></div><div class="hero-shade"></div>
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow light">GEODOMAS · PRODUCT ACADEMY</p>
+        <h1>Choose the system<br>before the model.</h1>
+        <p>Understand what each GEODOMAS product family is for, how the systems differ, and where project-specific engineering begins.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#families-section">Explore product families →</a>
+          <a class="btn btn-glass" href="https://chat.geodomas.lt/">✦ Ask GEODOMAS AI ↗</a>
+        </div>
+      </div>
+      <div class="hero-caption"><span>CURATED SPECIALIST KNOWLEDGE</span><i></i><span>PUBLIC-SAFE ORIENTATION</span></div>
+    </div>
+  </section>
+
+  <section class="selection-strip shell-wide reveal">
+    <div><small>01</small><b>PURPOSE</b><span>What must the space do?</span></div><i>→</i>
+    <div><small>02</small><b>PRODUCT FAMILY</b><span>Which system fits the purpose?</span></div><i>→</i>
+    <div><small>03</small><b>MODEL</b><span>Which current route fits the scale?</span></div><i>→</i>
+    <div><small>04</small><b>VERIFICATION</b><span>What must be engineered or confirmed?</span></div>
+  </section>
+
+  <section id="families-section" class="section shell-wide reveal">
+    <div class="section-head split-head">
+      <div><p class="eyebrow">01 · PRODUCT MAP</p><h2>Current specialist-backed families</h2></div>
+      <p>Start from use, not diameter. The cards below are generated from the current curated GEODOMAS public snapshot.</p>
+    </div>
+    <div id="families" class="family-grid"></div>
+  </section>
+
+  <section class="router-section reveal">
+    <div class="shell router-wrap">
+      <div class="router-copy">
+        <p class="eyebrow light">02 · PROJECT ROUTER</p>
+        <h2>What are you trying to build?</h2>
+        <p>Choose the intended use. The router gives a deterministic public orientation before you enter a live project dialogue.</p>
+        <a class="text-link light-link" href="project-start.html">Open the full Project Definition guide →</a>
+      </div>
+      <div class="router-card">
+        <label for="intent">Intended use</label>
+        <select id="intent"></select>
+        <button id="route-btn">Route my project →</button>
+        <div id="route-result" class="route-result">Select a direction.</div>
+        <p class="micro">Uses only the static public knowledge pack. No client records, private pricing, BOM or internal workspace access.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-system shell reveal">
+    <div class="system-title"><p class="eyebrow">ONE KNOWLEDGE SYSTEM</p><h2>Learn. Define. Calculate. Continue live.</h2></div>
+    <div class="system-grid">
+      <a href="index.html"><small>LEARN</small><h3>Product Academy</h3><p>Families, differences, use cases and public model routes.</p><strong>Explore products →</strong></a>
+      <a href="project-start.html"><small>DEFINE</small><h3>Project Definition</h3><p>Turn the idea into structured project inputs and responsibility boundaries.</p><strong>Start a project →</strong></a>
+      <a href="https://calc.geodomas.lt/"><small>CALCULATE</small><h3>GEODOMAS CALC</h3><p>Use deterministic geometry tools without converting geometry into certification.</p><strong>Open CALC ↗</strong></a>
+      <a class="dark-card" href="https://chat.geodomas.lt/"><small>CONTINUE LIVE</small><h3>GEODOMAS AI</h3><p>Move into product selection, technical clarification and the next project step.</p><strong>Open Assistant ↗</strong></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="shell-wide footer-inner"><div><b>GEODOMAS</b><span>Product Academy · public knowledge layer</span></div><nav><a href="../index.html">Home</a><a href="project-start.html">Start Project</a><a href="ai-training.html">AI Training</a><a href="https://chat.geodomas.lt/">AI Assistant ↗</a></nav></div></footer>
+<a class="floating-ai" href="https://chat.geodomas.lt/"><span>✦</span><b>Ask GEODOMAS AI</b><i>↗</i></a>
+<script type="module">import{bootIndex}from'./assets/academy.js';bootIndex();</script>
+</body></html>
