@@ -11,4 +11,6 @@ cp "$ROOT/index.html" "$ROOT/docs/index.html"
 # In the /docs Pages root, documentation files are already at the web root.
 sed -i 's#docs/GEODOMAS_AI_CURRICULUM_V1\.md#GEODOMAS_AI_CURRICULUM_V1.md#g' "$ROOT/docs/index.html"
 : > "$ROOT/docs/.nojekyll"
-cp "$ROOT/robots.txt" "$ROOT/docs/robots.txt"
+for file in robots.txt sitemap.xml 404.html; do
+  cp "$ROOT/$file" "$ROOT/docs/$file"
+done

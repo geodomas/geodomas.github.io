@@ -17,6 +17,7 @@ function chrome(){
 export async function bootIndex(){
  chrome();
  const [snap,router]=await Promise.all([j('../knowledge/iskra_public_snapshot.json'),j('../knowledge/project_router.json')]);
+ const dateEl=document.querySelector('#snapshot-date');if(dateEl)dateEl.textContent=`${snap.snapshot_date||'current'} · ${(snap.status||'curated_public_snapshot').replaceAll('_',' ').toUpperCase()}`;
  const grid=document.querySelector('#families');
  grid.innerHTML=snap.families.map((f,i)=>`<a class="family-card family-${slug(f.id)}" href="family.html?id=${encodeURIComponent(f.id)}"><div class="family-card-media"><span>${String(i+1).padStart(2,'0')} · ${esc(f.id)}</span></div><div class="family-card-body"><span class="tag">${esc(humanAuthority(f.authority))}</span><h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p><div class="chips">${(f.best_for||[]).slice(0,3).map(x=>`<span>${esc(x)}</span>`).join('')}</div><div class="more">Explore family →</div></div></a>`).join('');
  const sel=document.querySelector('#intent');sel.innerHTML=router.routes.map(x=>`<option value="${esc(x.id)}">${esc(x.label)}</option>`).join('');
@@ -29,10 +30,13 @@ export async function bootFamily(){
  const id=new URLSearchParams(location.search).get('id')||'GLAMPING';const snap=await j('../knowledge/iskra_public_snapshot.json');const f=snap.families.find(x=>x.id===id);
  if(!f){document.querySelector('main').innerHTML='<section class="shell section"><h1>Unknown product family.</h1><a href="index.html">← Back to Academy</a></section>';return;}
  document.body.dataset.family=id;document.title=`${f.title} · GEODOMAS Academy`;
- let meta=document.querySelector('meta[name="description"]');if(meta)meta.content=`${f.summary} GEODOMAS public product orientation with model routes and verification boundaries.`;
+ let meta=document.querySelector('meta[name="description"]');const description=`${f.summary} GEODOMAS public product orientation with model routes and verification boundaries.`;if(meta)meta.content=description;
  let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}canonical.href=`${location.origin}${location.pathname}?id=${encodeURIComponent(id)}`;
+ const setMeta=(selector,value)=>{const el=document.querySelector(selector);if(el)el.setAttribute('content',value);};setMeta('meta[property="og:title"]',`${f.title} · GEODOMAS Academy`);setMeta('meta[property="og:description"]',description);setMeta('meta[property="og:url"]',canonical.href);setMeta('meta[name="twitter:title"]',`${f.title} · GEODOMAS Academy`);setMeta('meta[name="twitter:description"]',description);
+ const imageByFamily={GLAMPING:'glamping.webp',HOMES:'homes.webp',GLAZED:'glass.webp',ROOFS:'hero.webp',MONOLIT:'hero.webp',CRYSTAL_DOME:'academy.webp',EDU_LINE:'academy.webp',INFINITY:'academy.webp'};const socialImage=`${location.origin}/assets/media/${imageByFamily[id]||'academy.webp'}`;setMeta('meta[property="og:image"]',socialImage);setMeta('meta[name="twitter:image"]',socialImage);
  const compareLink=document.querySelector('.family-compare-link');if(compareLink)compareLink.href=`compare.html?a=${encodeURIComponent(id)}`;
  const startLink=document.querySelector('.family-actions a[href="project-start.html"]');if(startLink)startLink.href=`brief-builder.html?family=${encodeURIComponent(id)}`;
+ const snapEl=document.querySelector('#family-snapshot');if(snapEl)snapEl.textContent=`PUBLIC SNAPSHOT · ${snap.snapshot_date||'CURRENT'}`;
  document.querySelector('#fid').textContent=`${f.id} · ${humanAuthority(f.authority)}`;document.querySelector('#title').textContent=f.title;document.querySelector('#summary').textContent=f.summary;document.querySelector('#difference').textContent=f.difference;
  document.querySelector('#best').innerHTML=(f.best_for||[]).map(x=>`<li>${esc(x)}</li>`).join('');
  document.querySelector('#advantages').innerHTML=(f.safe_advantages||[]).map(x=>`<li>${esc(x)}</li>`).join('');
@@ -41,6 +45,7 @@ export async function bootFamily(){
  const tech=f.technology_levels||f.technology_directions||f.facade_modes||f.configurations||[];document.querySelector('#tech').innerHTML=tech.map(x=>`<li>${esc(typeof x==='string'?x:`${x.id}: ${x.meaning}`)}</li>`).join('')||'<li>Project-specific configuration.</li>';
  document.querySelector('#notes').textContent=(f.notes||[]).join(' ')||'Final structural, envelope, legal and commercial claims remain project-specific.';
  const meta=[];if(models.length)meta.push(`${models.length} PUBLIC MODEL / ROUTE ITEMS`);if(tech.length)meta.push(`${tech.length} CONFIGURATION ITEMS`);meta.push('ENGINEERING GATE PRESERVED');document.querySelector('#family-meta').innerHTML=meta.map(x=>`<span>${esc(x)}</span>`).join('');
+ const rail=document.querySelector('#family-rail');if(rail)rail.innerHTML=snap.families.filter(x=>x.id!==id).map(x=>`<a class="family-rail-item family-${slug(x.id)}" href="family.html?id=${encodeURIComponent(x.id)}"><span>${esc(x.id)}</span><b>${esc(x.title)}</b><i>→</i></a>`).join('');
 }
 export async function bootTraining(){
  chrome();const [c,g]=await Promise.all([j('../knowledge/curriculum/curriculum.json'),j('../knowledge/curriculum/glossary.json')]);

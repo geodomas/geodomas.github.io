@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://geodomas.github.io/sitemap.xml
