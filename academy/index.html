@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/academy.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="topbar">
   <a class="brand" href="../index.html" aria-label="GEODOMAS home">
     <svg class="brand-mark" viewBox="0 0 80 72" aria-hidden="true"><path d="M40 3 9 20 4 52l22 16h28l22-16-5-32L40 3Zm0 0 14 17 17 0M40 3 26 20 9 20m17 0 14 17 14-17m-28 0L4 52m54-32 18 32M40 37 4 52m36-15 36 15M40 37 26 68m14-31 14 31M4 52h72" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
@@ -25,7 +26,7 @@
   </nav>
 </header>
 
-<main>
+<main id="main-content">
   <section class="academy-hero academy-hero-main">
     <div class="hero-media hero-academy"></div><div class="hero-shade"></div>
     <div class="shell hero-inner">
@@ -69,7 +70,7 @@
         <label for="intent">Intended use</label>
         <select id="intent"></select>
         <button id="route-btn">Route my project →</button>
-        <div id="route-result" class="route-result">Select a direction.</div>
+        <div id="route-result" class="route-result" aria-live="polite">Select a direction.</div>
         <p class="micro">Uses only the static public knowledge pack. No client records, private pricing, BOM or internal workspace access.</p>
       </div>
     </div>

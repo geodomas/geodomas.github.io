@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="assets/academy.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="topbar">
   <a class="brand" href="../index.html"><svg class="brand-mark" viewBox="0 0 80 72" aria-hidden="true"><path d="M40 3 9 20 4 52l22 16h28l22-16-5-32L40 3Zm0 0 14 17 17 0M40 3 26 20 9 20m17 0 14 17 14-17m-28 0L4 52m54-32 18 32M40 37 4 52m36-15 36 15M40 37 26 68m14-31 14 31M4 52h72" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><strong>GEODOMAS</strong><small>PROJECT BRIEF</small></span></a>
   <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
   <nav class="nav"><a href="index.html">Academy</a><a href="compare.html">Compare</a><a class="active" href="project-start.html">Start a Project</a><a href="ai-training.html">AI Training</a><a href="https://calc.geodomas.lt/">CALC ↗</a><a class="ai-nav" href="https://chat.geodomas.lt/">✦ AI Assistant</a></nav>
 </header>
-<main>
+<main id="main-content">
 <section class="brief-hero"><div class="shell brief-hero-grid"><div><p class="eyebrow light">PUBLIC BRIEF BUILDER</p><h1>Give the project<br>a clear starting point.</h1><p>Build a structured brief in your browser. Nothing is submitted or stored by this page. Copy the result, then continue the real project dialogue with the live GEODOMAS Assistant.</p></div><div class="privacy-seal"><span>LOCAL</span><b>BROWSER ONLY</b><small>NO FORM SUBMISSION · NO PRIVATE DATA LOOKUP</small></div></div></section>
 <section class="brief-builder shell-wide reveal">
   <form id="brief-form" class="brief-form" autocomplete="off">
-    <div class="brief-form-head"><p class="eyebrow">PROJECT INPUTS</p><h2>What do we know so far?</h2><p>Use only information you are comfortable placing into a public-side browser form. The generated brief stays on this device until you choose to copy it.</p></div>
+    <div class="brief-form-head"><p class="eyebrow">PROJECT INPUTS</p><h2>What do we know so far?</h2><p>Use only information you are comfortable placing into a public-side browser form. The generated brief stays on this device until you choose to copy it.</p><div class="brief-progress-wrap"><div><span>Core brief completeness</span><b id="brief-progress-label">0 / 6</b></div><div class="brief-progress" aria-hidden="true"><i id="brief-progress-bar"></i></div></div></div>
     <div class="form-grid">
       <label>Project name / reference<input id="brief-name" placeholder="Optional working name"></label>
       <label>Country / city / site<input id="brief-location" placeholder="e.g. Vilnius, Lithuania"></label>
@@ -35,7 +36,7 @@
     </div>
     <div class="brief-form-actions"><button type="button" id="brief-generate">Generate structured brief →</button><button type="reset" class="secondary" id="brief-reset">Clear</button></div>
   </form>
-  <aside class="brief-output-card"><div class="brief-output-head"><div><p class="eyebrow light">GENERATED PROJECT BRIEF</p><h2>Ready to continue.</h2></div><span id="brief-state">LOCAL ONLY</span></div><pre id="brief-output" class="brief-output">Fill the project inputs, then generate the brief.</pre><div class="brief-output-actions"><button type="button" id="brief-copy">Copy brief</button><a href="https://chat.geodomas.lt/">Open GEODOMAS AI ↗</a></div><p class="micro">Recommended workflow: copy the brief → open the live assistant → paste it into the project conversation. The public builder itself sends nothing.</p></aside>
+  <aside class="brief-output-card"><div class="brief-output-head"><div><p class="eyebrow light">GENERATED PROJECT BRIEF</p><h2>Ready to continue.</h2></div><span id="brief-state" aria-live="polite">LOCAL ONLY</span></div><pre id="brief-output" class="brief-output" aria-live="polite">Fill the project inputs, then generate the brief.</pre><div class="brief-output-actions"><button type="button" id="brief-copy">Copy brief</button><a href="https://chat.geodomas.lt/">Open GEODOMAS AI ↗</a></div><p class="micro">Recommended workflow: copy the brief → open the live assistant → paste it into the project conversation. The public builder itself sends nothing.</p></aside>
 </section>
 <section class="brief-next shell reveal"><div><p class="eyebrow">WHAT HAPPENS NEXT?</p><h2>Brief → Project Definition → Engineering gate.</h2></div><p>The brief improves routing and reduces missing inputs. It does not create a final technical design, binding price, permit conclusion or structural approval.</p></section>
 </main>

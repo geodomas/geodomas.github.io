@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="assets/academy.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="topbar">
   <a class="brand" href="../index.html"><svg class="brand-mark" viewBox="0 0 80 72" aria-hidden="true"><path d="M40 3 9 20 4 52l22 16h28l22-16-5-32L40 3Zm0 0 14 17 17 0M40 3 26 20 9 20m17 0 14 17 14-17m-28 0L4 52m54-32 18 32M40 37 4 52m36-15 36 15M40 37 26 68m14-31 14 31M4 52h72" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><strong>GEODOMAS</strong><small>PRODUCT COMPARE</small></span></a>
   <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
   <nav class="nav"><a href="index.html">Academy</a><a class="active" href="compare.html">Compare</a><a href="project-start.html">Start a Project</a><a href="ai-training.html">AI Training</a><a href="https://calc.geodomas.lt/">CALC ↗</a><a class="ai-nav" href="https://chat.geodomas.lt/">✦ AI Assistant</a></nav>
 </header>
-<main>
+<main id="main-content">
 <section class="compare-hero"><div class="shell compare-hero-grid"><div><p class="eyebrow light">PRODUCT DECISION TOOL</p><h1>Compare systems,<br>not just diameters.</h1><p>See what two current GEODOMAS product families are for, how they differ, which model routes exist publicly, and where project-specific verification begins.</p></div><div class="compare-orbit"><span>A/B</span><b>COMPARE</b><small>PURPOSE · MODELS · TECHNOLOGY · PROJECT START</small></div></div></section>
-<section class="compare-controls shell reveal"><div><label for="compare-a">Family A</label><select id="compare-a"></select></div><div class="compare-vs">VS</div><div><label for="compare-b">Family B</label><select id="compare-b"></select></div><button id="compare-run">Compare families →</button></section>
-<section class="compare-section shell-wide reveal"><div id="compare-results" class="compare-grid"></div></section>
+<section class="compare-controls shell reveal"><div><label for="compare-a">Family A</label><select id="compare-a"></select></div><div class="compare-vs">VS</div><div><label for="compare-b">Family B</label><select id="compare-b"></select></div><div class="compare-actions"><button type="button" id="compare-swap" class="secondary">Swap ↔</button><button type="button" id="compare-share" class="secondary">Copy link</button><button type="button" id="compare-run">Compare →</button></div></section>
+<section class="compare-section shell-wide reveal"><div id="compare-results" class="compare-grid" aria-live="polite"></div></section>
 <section class="compare-boundary"><div class="shell compare-boundary-grid"><div><p class="eyebrow light">DECISION BOUNDARY</p><h2>A comparison helps you choose a route. It does not approve a project.</h2></div><div><p>Final structure, foundation, envelope, energy, fire, waterproofing, permits, price, lead time and installation scope remain dependent on the current project evidence and responsible parties.</p><a class="btn btn-gold" href="https://chat.geodomas.lt/">✦ Discuss the real project with GEODOMAS AI ↗</a></div></div></section>
 </main>
 <footer class="footer"><div class="shell-wide footer-inner"><div><b>GEODOMAS</b><span>Product Compare · public orientation</span></div><nav><a href="index.html">Academy</a><a href="project-start.html">Start Project</a><a href="https://calc.geodomas.lt/">CALC ↗</a><a href="https://chat.geodomas.lt/">AI Assistant ↗</a></nav></div></footer>
