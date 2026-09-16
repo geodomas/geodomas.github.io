@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
+python3 "$ROOT/tools/build_family_pages.py"
+python3 "$ROOT/tools/build_sitemap.py"
 # GitHub Pages for this repository is currently configured to publish /docs.
 # Keep root as the authoring tree and mirror only the public runtime surface.
-for dir in assets academy knowledge; do
+for dir in assets academy knowledge lab; do
   rm -rf "$ROOT/docs/$dir"
   cp -a "$ROOT/$dir" "$ROOT/docs/$dir"
 done

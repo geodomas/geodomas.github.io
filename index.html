@@ -30,11 +30,9 @@
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
     <nav class="main-nav" aria-label="Primary">
       <a href="#models">Products</a>
-      <a href="academy/family.html?id=GLAMPING">Glamping</a>
-      <a href="academy/family.html?id=HOMES">Houses</a>
-      <a href="academy/family.html?id=GLAZED">Commercial</a>
+      <a href="academy/project-start.html">Project</a>
       <a href="academy/index.html">Academy</a>
-      <a href="https://calc.geodomas.lt/">CALC ↗</a>
+      <a href="lab/">Technology</a>
       <a class="nav-ai" href="https://chat.geodomas.lt/"><span>✦</span> AI Assistant</a>
     </nav>
   </header>
@@ -78,15 +76,15 @@
         <div class="gateway-side"><p>Product family first. Exact model, technology level and engineering come next.</p><div class="gateway-actions"><a href="academy/compare.html">Compare products →</a><a href="academy/brief-builder.html">Build a project brief →</a></div></div>
       </div>
       <div class="product-strip">
-        <a class="product-card" href="academy/family.html?id=GLAMPING">
+        <a class="product-card" href="academy/families/glamping.html">
           <div class="product-media"><img src="assets/media/glamping.webp" loading="lazy" decoding="async" alt="GEODOMAS glamping dome"><span>01</span></div>
           <div class="product-body"><span class="product-icon">△</span><div><h3>Glamping</h3><p>Hospitality systems from compact stays to resort-scale concepts.</p></div><span class="arrow">→</span></div>
         </a>
-        <a class="product-card" href="academy/family.html?id=HOMES">
+        <a class="product-card" href="academy/families/homes.html">
           <div class="product-media"><img src="assets/media/homes.webp" loading="lazy" decoding="async" alt="GEODOMAS dome house"><span>02</span></div>
           <div class="product-body"><span class="product-icon">⌂</span><div><h3>Dome Houses</h3><p>Residential architecture from compact homes to signature villas.</p></div><span class="arrow">→</span></div>
         </a>
-        <a class="product-card" href="academy/family.html?id=GLAZED">
+        <a class="product-card" href="academy/families/glazed.html">
           <div class="product-media"><img src="assets/media/glass.webp" loading="lazy" decoding="async" alt="GEODOMAS glazed dome architecture"><span>03</span></div>
           <div class="product-body"><span class="product-icon">▦</span><div><h3>Commercial & Glass</h3><p>Building-grade glass, office, public and hospitality systems.</p></div><span class="arrow">→</span></div>
         </a>
@@ -135,55 +133,21 @@
       </div>
     </section>
 
-    <section class="lab-section" id="public-lab">
-      <div class="shell">
-        <div class="lab-topline">
-          <div class="section-heading light">
-            <p class="eyebrow">PUBLIC LAB</p>
-            <h2>Deterministic tools.<br>Clear boundaries.</h2>
-            <p>Public instruments use explicit product and CALC contracts. They provide orientation data without turning geometry into unsupported engineering claims.</p>
-          </div>
-          <a class="calc-orbit" href="https://calc.geodomas.lt/"><span>CALC</span><small>GEOMETRY KERNEL</small><b>↗</b></a>
+    <section class="technology-teaser reveal" id="technology">
+      <div class="shell technology-teaser-grid">
+        <div class="technology-teaser-copy">
+          <p class="eyebrow">GEODOMAS TECHNOLOGY</p>
+          <h2>Public tools belong in a lab.<br>Projects belong in a process.</h2>
+          <p>Use deterministic instruments for model orientation, geometry summaries, frame data and CALC mesh analysis. When the question becomes project-specific, continue through the Project Definition or the live GEODOMAS Assistant.</p>
+          <div class="technology-actions"><a class="btn btn-gold" href="lab/">Explore Technology Lab →</a><a class="text-link" href="https://calc.geodomas.lt/">Open CALC ↗</a></div>
         </div>
-
-        <div class="lab-grid reveal">
-          <article class="tool-card">
-            <span class="tool-num">01 / MODEL FINDER</span><h3>Find a GEODOMAS model</h3><p>Search the public-safe model registry by product, family or description.</p>
-            <form id="finder-form"><label>Search</label><input id="finder-q" placeholder="GLAMP 50"><label>Family</label><select id="finder-family"><option value="">All</option><option>GLAMPING</option><option>HOMES</option><option>GLAZED</option><option>ROOFS</option><option>MONOLIT</option><option>INFINITY</option></select><button>Find models</button></form><pre id="finder-output" class="result">Waiting…</pre>
-          </article>
-          <article class="tool-card">
-            <span class="tool-num">02 / MODEL SPEC</span><h3>Expand a model</h3><p>Indexed geometry and frame orientation with explicit engineering gates.</p>
-            <form id="spec-form"><label>Model</label><input id="model" required placeholder="GLAMP 50"><label>Language</label><select id="spec-lang"><option value="en">English</option><option value="lt">Lietuvių</option></select><button>Generate specification</button></form><pre id="spec-output" class="result">Waiting…</pre>
-          </article>
-          <article class="tool-card">
-            <span class="tool-num">03 / GEOMETRY</span><h3>Geometry summary</h3><p>Safe source geometry and derived orientation metrics.</p>
-            <form id="geometry-form"><label>Model</label><input id="geometry-model" required placeholder="GLAMP 50"><button>Calculate geometry</button></form><pre id="geometry-output" class="result">Waiting…</pre>
-          </article>
-          <article class="tool-card">
-            <span class="tool-num">04 / FRAME</span><h3>Frame orientation</h3><p>Frequency, connection family and profile token without private production logic.</p>
-            <form id="frame-form"><label>Model</label><input id="frame-model" required placeholder="GLAMP 50"><button>Show frame data</button></form><pre id="frame-output" class="result">Waiting…</pre>
-          </article>
-          <article class="tool-card">
-            <span class="tool-num">05 / CALC MESH</span><h3>Analyze CALC JSON</h3><p>Analyze your own CALC mesh export for topology and public-safe aggregate geometry.</p>
-            <form id="mesh-form"><label>CALC JSON export</label><input id="mesh-file" type="file" accept="application/json,.json" required><button>Analyze mesh</button></form><pre id="mesh-output" class="result">Waiting…</pre>
-          </article>
-          <article class="tool-card tool-ai">
-            <span class="tool-num">06 / FULL LIVE AI</span><h3>Need the next step?</h3><p>Use deterministic tools for geometry. Use the live assistant for product selection, project questions and controlled GEODOMAS knowledge.</p>
-            <a class="tool-ai-btn" href="https://chat.geodomas.lt/">✦ Open GEODOMAS AI Assistant ↗</a>
-            <div class="ai-note">Separate live service · Public Lab does not proxy private knowledge.</div>
-          </article>
+        <div class="technology-stack" aria-label="Technology Lab scope">
+          <div><span>01</span><b>MODEL</b><small>finder + public specification</small></div>
+          <div><span>02</span><b>GEOMETRY</b><small>deterministic summaries</small></div>
+          <div><span>03</span><b>FRAME</b><small>orientation, not fabrication approval</small></div>
+          <div><span>04</span><b>MESH</b><small>CALC JSON topology analysis</small></div>
+          <div><span>05</span><b>KNOWLEDGE</b><small>curated public product map</small></div>
         </div>
-      </div>
-    </section>
-
-    <section class="knowledge-section shell reveal">
-      <div class="knowledge-head">
-        <div class="section-heading"><p class="eyebrow">AI-READABLE KNOWLEDGE</p><h2>Human-readable.<br>Machine-readable.</h2></div>
-        <p>The same curated public knowledge pack powers Product Academy and can teach other AI systems to understand GEODOMAS product families, project-start logic and claim boundaries.</p>
-      </div>
-      <div class="knowledge-grid">
-        <article><div class="knowledge-label">PRODUCT MAP</div><h3>Current product families</h3><pre id="knowledge-output" class="result knowledge-result">Loading product map…</pre></article>
-        <article><div class="knowledge-label">PROJECT START</div><h3>From idea to structured brief</h3><pre id="project-output" class="result knowledge-result">Loading project guide…</pre></article>
       </div>
     </section>
 
@@ -199,15 +163,13 @@
     <div class="shell-wide footer-grid">
       <div><div class="footer-brand">GEODOMAS</div><p>Premium geodesic architecture, product systems and technology.</p></div>
       <div><span>EXPLORE</span><a href="academy/index.html">Product Academy</a><a href="academy/project-start.html">Start a Project</a><a href="academy/compare.html">Compare Products</a><a href="academy/brief-builder.html">Project Brief Builder</a><a href="docs/GEODOMAS_AI_CURRICULUM_V1.md">AI Curriculum</a></div>
-      <div><span>TOOLS</span><a href="https://calc.geodomas.lt/">GEODOMAS CALC ↗</a><a href="https://chat.geodomas.lt/">AI Assistant ↗</a><a href="https://geodomas.lt/">GEODOMAS Website ↗</a></div>
+      <div><span>TOOLS</span><a href="lab/">Technology Lab</a><a href="https://calc.geodomas.lt/">GEODOMAS CALC ↗</a><a href="https://chat.geodomas.lt/">AI Assistant ↗</a><a href="https://geodomas.lt/">GEODOMAS Website ↗</a></div>
     </div>
-    <div class="shell-wide footer-bottom"><span>Public Lab V1 · Geometry output is orientation data, not structural certification.</span><span>GEODOMAS · 2026</span></div>
+    <div class="shell-wide footer-bottom"><span>Technology Lab · Geometry output is orientation data, not structural certification.</span><span>GEODOMAS · 2026</span></div>
   </footer>
 
   <a class="floating-ai" href="https://chat.geodomas.lt/" aria-label="Open GEODOMAS AI Assistant"><span>✦</span><b>Ask GEODOMAS AI</b><i>↗</i></a>
 
-  <script src="assets/config.js"></script>
-  <script type="module" src="assets/app.js"></script>
   <script>
     const toggle=document.querySelector('.menu-toggle'), nav=document.querySelector('.main-nav'), header=document.querySelector('.site-header');
     const setHeader=()=>header?.classList.toggle('scrolled',window.scrollY>12);setHeader();window.addEventListener('scroll',setHeader,{passive:true});

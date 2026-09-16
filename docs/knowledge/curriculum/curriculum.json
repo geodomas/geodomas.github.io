@@ -164,7 +164,7 @@
         "CALC contains sphere-part / dome-height state, including partial, partialHeight and partialMode concepts.",
         "The viewer/runtime uses a height relation consistent with baseY = 1 - 2 × partialHeight in height mode.",
         "CALC also has an Align the base state.",
-        "Public Lab intentionally does not fabricate spherical-cap derived values for models flagged as Flat/aligned when the indexed fields are insufficient."
+        "Technology Lab intentionally does not fabricate spherical-cap derived values for models flagged as Flat/aligned when the indexed fields are insufficient."
       ],
       "pass_condition": "AI asks for the actual CALC state/export when base alignment or unusual cuts make nominal geometry insufficient."
     },
@@ -198,7 +198,7 @@
       "facts": [
         "GEODOMAS CALC is the public geometry kernel used to configure and inspect dome geometry.",
         "The public contract includes normalized calculator state fields such as hash, connection type/profile, radius, frequency, partial state, partial height, base alignment and fullerene flag.",
-        "Public Lab can use model registry data or user-supplied CALC JSON mesh exports for deterministic orientation outputs.",
+        "Technology Lab can use model registry data or user-supplied CALC JSON mesh exports for deterministic orientation outputs.",
         "Pricing, project, lead, audit and worker endpoints are not automatically enabled merely because contracts exist."
       ],
       "pass_condition": "AI sends geometry questions to deterministic CALC/model tools before attempting narrative inference."

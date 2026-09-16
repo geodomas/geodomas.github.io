@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GEODOMAS Technology Lab — deterministic public tools for product orientation, geometry summaries, frame orientation, CALC mesh analysis and public knowledge.">
+  <meta name="theme-color" content="#111318">
+  <title>GEODOMAS Technology Lab</title>
+  <link rel="canonical" href="https://geodomas.github.io/lab/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GEODOMAS Technology Lab">
+  <meta property="og:description" content="Deterministic public tools with explicit product and engineering boundaries.">
+  <meta property="og:url" content="https://geodomas.github.io/lab/">
+  <meta property="og:image" content="https://geodomas.github.io/assets/media/academy.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="technology-lab-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="GEODOMAS home">
+      <svg class="brand-mark" viewBox="0 0 80 72" aria-hidden="true"><path d="M40 3 9 20 4 52l22 16h28l22-16-5-32L40 3Zm0 0 14 17 17 0M40 3 26 20 9 20m17 0 14 17 14-17m-28 0L4 52m22-32L9 20m45 0 22 32M40 37 4 52m36-15 36 15M40 37 26 68m14-31 14 31M4 52h72M9 20l17 48m45-48L54 68" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span><strong>GEODOMAS</strong><small>TECHNOLOGY LAB</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="../#models">Products</a>
+      <a href="../academy/project-start.html">Project</a>
+      <a href="../academy/">Academy</a>
+      <a class="active" href="./">Technology</a>
+      <a class="nav-ai" href="https://chat.geodomas.lt/"><span>✦</span> AI Assistant</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="lab-page-hero">
+      <div class="lab-grid-bg" aria-hidden="true"></div>
+      <div class="shell lab-page-hero-grid">
+        <div>
+          <p class="eyebrow">GEODOMAS · PUBLIC TECHNOLOGY LAB</p>
+          <h1>Deterministic tools.<br>Explicit boundaries.</h1>
+          <p>Use public product and CALC contracts for repeatable orientation. Geometry output remains geometry; project-specific structural, legal, thermal, commercial and fabrication conclusions stay behind their proper verification gates.</p>
+          <div class="hero-actions"><a class="btn btn-gold" href="#tools">Open instruments ↓</a><a class="btn btn-ghost" href="https://calc.geodomas.lt/">Open GEODOMAS CALC ↗</a></div>
+        </div>
+        <div class="lab-boundary-orbit"><span>PUBLIC</span><b>DETERMINISTIC</b><small>NO PRIVATE SOURCE LOOKUP · NO STRUCTURAL CERTIFICATION</small></div>
+      </div>
+    </section>
+
+    <section class="lab-proof shell-wide" aria-label="Technology Lab boundaries">
+      <div><small>01</small><b>PUBLIC REGISTRY</b><span>curated product orientation</span></div>
+      <div><small>02</small><b>DETERMINISTIC CALC</b><span>geometry and aggregate metrics</span></div>
+      <div><small>03</small><b>PRIVATE BRIDGE OFF</b><span>no management or specialist source query</span></div>
+      <div><small>04</small><b>HUMAN GATE</b><span>engineering and project approval remain separate</span></div>
+    </section>
+
+    <section class="lab-section lab-dedicated" id="tools">
+      <div class="shell">
+        <div class="lab-topline">
+          <div class="section-heading light">
+            <p class="eyebrow">PUBLIC INSTRUMENTS</p>
+            <h2>Inspect the system.<br>Do not overclaim it.</h2>
+            <p>Every instrument below is public-safe and orientation-only. Use the live Assistant when the question becomes project-specific.</p>
+          </div>
+          <a class="calc-orbit" href="https://calc.geodomas.lt/"><span>CALC</span><small>GEOMETRY KERNEL</small><b>↗</b></a>
+        </div>
+        <div class="lab-grid reveal">
+          <article class="tool-card"><span class="tool-num">01 / MODEL FINDER</span><h3>Find a GEODOMAS model</h3><p>Search the public-safe model registry by product, family or description.</p><form id="finder-form"><label>Search</label><input id="finder-q" placeholder="GLAMP 50"><label>Family</label><select id="finder-family"><option value="">All</option><option>GLAMPING</option><option>HOMES</option><option>GLAZED</option><option>ROOFS</option><option>MONOLIT</option><option>INFINITY</option></select><button>Find models</button></form><pre id="finder-output" class="result">Waiting…</pre></article>
+          <article class="tool-card"><span class="tool-num">02 / MODEL SPEC</span><h3>Expand a model</h3><p>Indexed geometry and frame orientation with explicit engineering gates.</p><form id="spec-form"><label>Model</label><input id="model" required placeholder="GLAMP 50"><label>Language</label><select id="spec-lang"><option value="en">English</option><option value="lt">Lietuvių</option></select><button>Generate specification</button></form><pre id="spec-output" class="result">Waiting…</pre></article>
+          <article class="tool-card"><span class="tool-num">03 / GEOMETRY</span><h3>Geometry summary</h3><p>Safe source geometry and derived orientation metrics.</p><form id="geometry-form"><label>Model</label><input id="geometry-model" required placeholder="GLAMP 50"><button>Calculate geometry</button></form><pre id="geometry-output" class="result">Waiting…</pre></article>
+          <article class="tool-card"><span class="tool-num">04 / FRAME</span><h3>Frame orientation</h3><p>Frequency, connection family and profile token without private production logic.</p><form id="frame-form"><label>Model</label><input id="frame-model" required placeholder="GLAMP 50"><button>Show frame data</button></form><pre id="frame-output" class="result">Waiting…</pre></article>
+          <article class="tool-card"><span class="tool-num">05 / CALC MESH</span><h3>Analyze CALC JSON</h3><p>Analyze your own CALC mesh export for topology and public-safe aggregate geometry.</p><form id="mesh-form"><label>CALC JSON export</label><input id="mesh-file" type="file" accept="application/json,.json" required><button>Analyze mesh</button></form><pre id="mesh-output" class="result">Waiting…</pre></article>
+          <article class="tool-card tool-ai"><span class="tool-num">06 / FULL LIVE AI</span><h3>Need the next step?</h3><p>Use deterministic tools for geometry. Use the live assistant for product selection, project questions and controlled GEODOMAS knowledge.</p><a class="tool-ai-btn" href="https://chat.geodomas.lt/">✦ Open GEODOMAS AI Assistant ↗</a><div class="ai-note">Separate live service · Technology Lab does not proxy private knowledge.</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="knowledge-section shell reveal">
+      <div class="knowledge-head"><div class="section-heading"><p class="eyebrow">AI-READABLE KNOWLEDGE</p><h2>Human-readable.<br>Machine-readable.</h2></div><p>The curated public knowledge pack exposes product taxonomy and project-start logic without exposing specialist workspaces, client records, private BOMs or internal commercial truth.</p></div>
+      <div class="knowledge-grid"><article><div class="knowledge-label">PRODUCT MAP</div><h3>Current product families</h3><pre id="knowledge-output" class="result knowledge-result">Loading product map…</pre></article><article><div class="knowledge-label">PROJECT START</div><h3>From idea to structured brief</h3><pre id="project-output" class="result knowledge-result">Loading project guide…</pre></article></div>
+    </section>
+
+    <section class="lab-next-step"><div class="shell final-cta-grid"><div><p class="eyebrow">WHEN THE QUESTION BECOMES A PROJECT</p><h2>Move from tool output to controlled dialogue.</h2></div><div class="final-actions"><a class="btn btn-gold" href="https://chat.geodomas.lt/">✦ Ask GEODOMAS AI ↗</a><a class="text-link light-link" href="../academy/brief-builder.html">Build a project brief →</a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell-wide footer-grid"><div><div class="footer-brand">GEODOMAS</div><p>Public technology instruments with explicit verification boundaries.</p></div><div><span>EXPLORE</span><a href="../academy/">Product Academy</a><a href="../academy/compare.html">Compare Products</a><a href="../academy/brief-builder.html">Project Brief Builder</a></div><div><span>TOOLS</span><a href="https://calc.geodomas.lt/">GEODOMAS CALC ↗</a><a href="https://chat.geodomas.lt/">AI Assistant ↗</a></div></div><div class="shell-wide footer-bottom"><span>Technology Lab · Orientation data is not structural certification.</span><span>GEODOMAS · 2026</span></div></footer>
+  <a class="floating-ai" href="https://chat.geodomas.lt/" aria-label="Open GEODOMAS AI Assistant"><span>✦</span><b>Ask GEODOMAS AI</b><i>↗</i></a>
+  <script src="../assets/config.js"></script>
+  <script type="module" src="../assets/app.js"></script>
+  <script>
+    const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav'),header=document.querySelector('.site-header');
+    const setHeader=()=>header?.classList.toggle('scrolled',window.scrollY>12);setHeader();window.addEventListener('scroll',setHeader,{passive:true});
+    toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Close':'Menu';});
+    nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(nav.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');if(toggle)toggle.textContent='Menu';}}));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');if(toggle){toggle.textContent='Menu';toggle.focus();}}});
+    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduce&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
+  </script>
+</body></html>
