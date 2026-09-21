@@ -1,0 +1,292 @@
+{
+  "schema": 2,
+  "webp_quality": 82,
+  "avif_quality": 55,
+  "sources": {
+    "hero.webp": {
+      "source": "hero.webp",
+      "source_sha256": "c2f214f417b51200a50d5009de2ab028d1b4a2ed0d3eb58688d49d7ef800b79e",
+      "source_width": 2400,
+      "source_height": 1400,
+      "source_bytes": 456548,
+      "variants": [
+        {
+          "width": 640,
+          "webp": {
+            "height": 374,
+            "path": "assets/media/responsive/hero-640.webp",
+            "bytes": 53136,
+            "sha256": "3af9c4f21924e32effbb3711cdc7f465c96c026d9b48ca9186982fd416edecf9"
+          },
+          "avif": {
+            "height": 373,
+            "path": "assets/media/responsive/hero-640.avif",
+            "bytes": 98589,
+            "sha256": "d1132a626f16f6bffe29babd06689388f565bf5d07e24bc49e72af51079b2325"
+          }
+        },
+        {
+          "width": 960,
+          "webp": {
+            "height": 560,
+            "path": "assets/media/responsive/hero-960.webp",
+            "bytes": 108370,
+            "sha256": "d1c3c6b38980ed881afeba7c57ca3395b5a06266ac0cd7407ef8144a49d1d26b"
+          },
+          "avif": {
+            "height": 560,
+            "path": "assets/media/responsive/hero-960.avif",
+            "bytes": 143886,
+            "sha256": "b4d52b9af80c413ab98418f15844806037b53d5e95a068399bf8511a3b1e0277"
+          }
+        },
+        {
+          "width": 1440,
+          "webp": {
+            "height": 840,
+            "path": "assets/media/responsive/hero-1440.webp",
+            "bytes": 207398,
+            "sha256": "b1375ca6e9f0a80f9ee019a10c08e75e6a4ce2dee0a96c491150d1001166142b"
+          },
+          "avif": {
+            "height": 840,
+            "path": "assets/media/responsive/hero-1440.avif",
+            "bytes": 223992,
+            "sha256": "3d3f6d37cd737694f1369340c099f723f82a1d4030409bf8eb890c300066b11f"
+          }
+        },
+        {
+          "width": 1920,
+          "webp": {
+            "height": 1120,
+            "path": "assets/media/responsive/hero-1920.webp",
+            "bytes": 302056,
+            "sha256": "86af5d133fc36090821e0d88127ff5b5eb416bbac3888ae47131cea4d051a932"
+          },
+          "avif": {
+            "height": 1120,
+            "path": "assets/media/responsive/hero-1920.avif",
+            "bytes": 304067,
+            "sha256": "4d2f3f0d6d3506a0a802054537e3eb3e7b7a8f0c0571c07aff282fedd8831b98"
+          }
+        }
+      ]
+    },
+    "glamping.webp": {
+      "source": "glamping.webp",
+      "source_sha256": "c05f4e5152368046cfb0fe70499995d5b28fb3dbe2bff2faf9fe5639fb83e217",
+      "source_width": 1200,
+      "source_height": 760,
+      "source_bytes": 148640,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 304,
+            "path": "assets/media/responsive/glamping-480.webp",
+            "bytes": 36770,
+            "sha256": "7000f7615dede1efd1e5c26580d5ae2fbf291e9335d4d67743f41bd3930b5839"
+          },
+          "avif": {
+            "height": 304,
+            "path": "assets/media/responsive/glamping-480.avif",
+            "bytes": 30395,
+            "sha256": "80d0d77966ba785272c5c8b43d00541ef7617cb9d2868571d7626eadbb854c64"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 507,
+            "path": "assets/media/responsive/glamping-800.webp",
+            "bytes": 81870,
+            "sha256": "0ca96d1e9efe83f94ccc91be30f7cb57eb92fec300e670ab65e780e28b596984"
+          },
+          "avif": {
+            "height": 507,
+            "path": "assets/media/responsive/glamping-800.avif",
+            "bytes": 68539,
+            "sha256": "8156c3eb6bb675ad12c8d6547f2109cbd1844677ded95e522a6a41fb09fd7afd"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 760,
+            "path": "assets/media/glamping.webp",
+            "bytes": 148640,
+            "sha256": "c05f4e5152368046cfb0fe70499995d5b28fb3dbe2bff2faf9fe5639fb83e217"
+          },
+          "avif": {
+            "height": 760,
+            "path": "assets/media/responsive/glamping-1200.avif",
+            "bytes": 128110,
+            "sha256": "80a97b59bcf097b48dd983526ebb8a27425c8c21f2c688f32f108678831c81b8"
+          }
+        }
+      ]
+    },
+    "homes.webp": {
+      "source": "homes.webp",
+      "source_sha256": "fa8b43ba414897dea81099391edf8b0449281ec5c8dc1c3454695dbcaa35c338",
+      "source_width": 1200,
+      "source_height": 760,
+      "source_bytes": 327454,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 304,
+            "path": "assets/media/responsive/homes-480.webp",
+            "bytes": 45766,
+            "sha256": "c311cbc2e60b02d4130415bfa54857606e50b58b63354c21303cd043e94eae2f"
+          },
+          "avif": {
+            "height": 304,
+            "path": "assets/media/responsive/homes-480.avif",
+            "bytes": 41768,
+            "sha256": "f92bdcd3fd61f40fecdb82b9423f7941173b1aaab76b535ed63ce598f642620b"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 507,
+            "path": "assets/media/responsive/homes-800.webp",
+            "bytes": 143058,
+            "sha256": "99e93eaff24aff9fdbe928f979c8b18d17a03e1273a96364f355d91305f444d6"
+          },
+          "avif": {
+            "height": 507,
+            "path": "assets/media/responsive/homes-800.avif",
+            "bytes": 127118,
+            "sha256": "6391c374e30746d01a4a21af42810284828f4fec3255b6eb2b6d277160fe64fc"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 760,
+            "path": "assets/media/homes.webp",
+            "bytes": 327454,
+            "sha256": "fa8b43ba414897dea81099391edf8b0449281ec5c8dc1c3454695dbcaa35c338"
+          },
+          "avif": {
+            "height": 760,
+            "path": "assets/media/responsive/homes-1200.avif",
+            "bytes": 305244,
+            "sha256": "fbc66f95d8a505502150f52567dad5d8fc010f360f0f7b69c617359187a233c3"
+          }
+        }
+      ]
+    },
+    "glass.webp": {
+      "source": "glass.webp",
+      "source_sha256": "0c64b2a1cd513fea6a638d8fd14a459da320106693954cf23fe28b8e47b60cc0",
+      "source_width": 1200,
+      "source_height": 760,
+      "source_bytes": 123950,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 304,
+            "path": "assets/media/responsive/glass-480.webp",
+            "bytes": 30056,
+            "sha256": "8347394432f4315001742f0b24475b484d29a05c3f922cc7fc32dc05f6f5728b"
+          },
+          "avif": {
+            "height": 304,
+            "path": "assets/media/responsive/glass-480.avif",
+            "bytes": 25451,
+            "sha256": "e80d469a40e56edad777dcc9e3365accea0198ddcf0136ba5bce372b3c11bd32"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 507,
+            "path": "assets/media/responsive/glass-800.webp",
+            "bytes": 69852,
+            "sha256": "c69225ef756719c971e1fd75f2c69b30995d94e552f5235d6094c94958d853b5"
+          },
+          "avif": {
+            "height": 507,
+            "path": "assets/media/responsive/glass-800.avif",
+            "bytes": 58801,
+            "sha256": "ce1b595d5382014e6c5f175b4486cd169f5fb7dddc21b89c2037f1416969cce8"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 760,
+            "path": "assets/media/glass.webp",
+            "bytes": 123950,
+            "sha256": "0c64b2a1cd513fea6a638d8fd14a459da320106693954cf23fe28b8e47b60cc0"
+          },
+          "avif": {
+            "height": 760,
+            "path": "assets/media/responsive/glass-1200.avif",
+            "bytes": 113117,
+            "sha256": "8f5edbaff588ec336d075f06565e710344674ec7c522fc3ff716b71646da7e86"
+          }
+        }
+      ]
+    },
+    "academy.webp": {
+      "source": "academy.webp",
+      "source_sha256": "5ce98a9c9c34be38bc0ec690ae2914852474fb09cb5fa5c33e28bfc7d2560056",
+      "source_width": 1200,
+      "source_height": 760,
+      "source_bytes": 290968,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 304,
+            "path": "assets/media/responsive/academy-480.webp",
+            "bytes": 50538,
+            "sha256": "4a580687f2830cff7d1d9122af8d2ef29cc0554d0868b98bc76b71b5c547597e"
+          },
+          "avif": {
+            "height": 304,
+            "path": "assets/media/responsive/academy-480.avif",
+            "bytes": 73106,
+            "sha256": "db4d5a3d95d823363245424f89494cbb50dd3845ccb87ebd71458726d2cf6e65"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 507,
+            "path": "assets/media/responsive/academy-800.webp",
+            "bytes": 128490,
+            "sha256": "d2813d75aededd42866a91dbab49d06cf778929778636cbed3d93b7070df4a96"
+          },
+          "avif": {
+            "height": 507,
+            "path": "assets/media/responsive/academy-800.avif",
+            "bytes": 146575,
+            "sha256": "910d84049964ee918f72445f913e2fdb150e4d947c8bc459ebb286fb8005b2bc"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 760,
+            "path": "assets/media/academy.webp",
+            "bytes": 290968,
+            "sha256": "5ce98a9c9c34be38bc0ec690ae2914852474fb09cb5fa5c33e28bfc7d2560056"
+          },
+          "avif": {
+            "height": 760,
+            "path": "assets/media/responsive/academy-1200.avif",
+            "bytes": 280899,
+            "sha256": "20183e307e93ecd97491a676ebd3233a66d7ea810b639e2e8732235f15f0f366"
+          }
+        }
+      ]
+    }
+  }
+}

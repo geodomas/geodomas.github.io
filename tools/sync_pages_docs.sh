@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
+python3 "$ROOT/tools/build_responsive_media.py"
 python3 "$ROOT/tools/build_family_pages.py"
 python3 "$ROOT/tools/build_sitemap.py"
 # GitHub Pages for this repository is currently configured to publish /docs.
