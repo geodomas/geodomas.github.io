@@ -74,3 +74,7 @@ body[data-family="GLAMPING"] .family-visual{background-image:image-set(url('../.
 .family-card-media span,.compare-card-image span,.router-card label{font-size:.7rem}
 .router-copy .text-link{display:inline-flex;align-items:center;min-height:44px}
 @media(max-width:900px){.footer nav a{min-width:44px}}
+/* Final desktop decorative-caption floor. */
+.hero-caption{font-size:.68rem}
+/* Final semantic microcopy floor. */
+.hero-caption,.family-meta span,.family-subnav span,.compare-orbit b,.privacy-seal b,.compare-orbit small,.privacy-seal small{font-size:.7rem}

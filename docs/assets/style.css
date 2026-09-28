@@ -51,3 +51,5 @@ html{scroll-padding-top:112px}::selection{background:#d9bb8d;color:#171717}.skip
 @media(max-width:900px){.hero-subactions a,.project-actions a,.mini-ai,.footer-grid a{display:flex;align-items:center;min-height:44px}.footer-grid>div:nth-child(n+2){gap:2px}}
 /* Final mobile microtype floor. */
 .calc-orbit small{font-size:.7rem}
+/* Final semantic microcopy floor. */
+.hero-proof,.hero-scroll{font-size:.7rem}.lab-boundary-orbit b,.lab-boundary-orbit small{font-size:.7rem}
