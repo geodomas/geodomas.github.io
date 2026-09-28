@@ -70,3 +70,7 @@ body[data-family="GLAMPING"] .family-visual{background-image:image-set(url('../.
 .definition-flow span{font-size:.7rem}.compare-card-image span{font-size:.68rem;background:rgba(10,10,10,.72)}.compare-orbit small,.privacy-seal small{font-size:.68rem}.brief-output-head>span{font-size:.7rem}.brief-progress-wrap>div:first-child{font-size:.75rem}
 .skip-link,.breadcrumb,.boundary-card a{min-height:44px;display:inline-flex;align-items:center}
 @media(max-width:900px){.footer nav a{display:inline-flex;align-items:center;min-height:44px}.footer nav{row-gap:0}}
+/* Final mobile microtype / target floor. */
+.family-card-media span,.compare-card-image span,.router-card label{font-size:.7rem}
+.router-copy .text-link{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:900px){.footer nav a{min-width:44px}}

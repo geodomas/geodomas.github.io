@@ -49,3 +49,5 @@ html{scroll-padding-top:112px}::selection{background:#d9bb8d;color:#171717}.skip
 .brand small{font-size:.7rem}.hero-proof{font-size:.68rem}.hero-scroll{font-size:.68rem}
 .skip-link,.main-nav a{min-height:44px;display:flex;align-items:center}
 @media(max-width:900px){.hero-subactions a,.project-actions a,.mini-ai,.footer-grid a{display:flex;align-items:center;min-height:44px}.footer-grid>div:nth-child(n+2){gap:2px}}
+/* Final mobile microtype floor. */
+.calc-orbit small{font-size:.7rem}
