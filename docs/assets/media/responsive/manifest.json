@@ -287,6 +287,276 @@
           }
         }
       ]
+    },
+    "roofs.webp": {
+      "source": "roofs.webp",
+      "source_sha256": "0de7fb16892a42a584a1de22789dfb7635b968b80aa1739e3468f05c82ef4efc",
+      "source_width": 1600,
+      "source_height": 1067,
+      "source_bytes": 441082,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 321,
+            "path": "assets/media/responsive/roofs-480.webp",
+            "bytes": 41116,
+            "sha256": "40b3b0283d8750d152918934dceedae4d46c053d18edb08022419ed2ab9ff610"
+          },
+          "avif": {
+            "height": 320,
+            "path": "assets/media/responsive/roofs-480.avif",
+            "bytes": 30730,
+            "sha256": "134e52331e366cd8bb95c1d445e07878770dccb38266560941999700ca6761a8"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 534,
+            "path": "assets/media/responsive/roofs-800.webp",
+            "bytes": 102620,
+            "sha256": "ece2fd4bab0a863a4e6668016b7d387b76359e9e61fe7d0d7974511a41d9a8b5"
+          },
+          "avif": {
+            "height": 534,
+            "path": "assets/media/responsive/roofs-800.avif",
+            "bytes": 75897,
+            "sha256": "2122b783023e40921b644ccbf293bb619f49d200b50a104fdbde88faf4e2f49b"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 801,
+            "path": "assets/media/responsive/roofs-1200.webp",
+            "bytes": 186296,
+            "sha256": "dc8955e50b6e5939d36758f6b4b7f54e3656958a6fe0a7681a2cbfbead43678a"
+          },
+          "avif": {
+            "height": 800,
+            "path": "assets/media/responsive/roofs-1200.avif",
+            "bytes": 143507,
+            "sha256": "679e9e478ef8d5f68d13cb8243e29283ae44e203efebf7579561cc27e45a5feb"
+          }
+        }
+      ]
+    },
+    "monolit.webp": {
+      "source": "monolit.webp",
+      "source_sha256": "75790a09f8b6d73ace645b5383feb3330ba93b9ef957e5090119217462535c2a",
+      "source_width": 1600,
+      "source_height": 1067,
+      "source_bytes": 450344,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 321,
+            "path": "assets/media/responsive/monolit-480.webp",
+            "bytes": 39578,
+            "sha256": "d23aed7cbc4fbeb5ddaa7965cb140c5bb44d7308eeb6a252025192d53b5dc398"
+          },
+          "avif": {
+            "height": 320,
+            "path": "assets/media/responsive/monolit-480.avif",
+            "bytes": 29727,
+            "sha256": "c5304cfbc80bfb8a0f00b6090f2990e39257025f568eb3fbe278cf459003923b"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 534,
+            "path": "assets/media/responsive/monolit-800.webp",
+            "bytes": 101504,
+            "sha256": "635ee2f17d5e0f6b62e23fa45528d4361329eeb9475daca587d901a3dd54a3fd"
+          },
+          "avif": {
+            "height": 534,
+            "path": "assets/media/responsive/monolit-800.avif",
+            "bytes": 78257,
+            "sha256": "5c1cc63a5830c173b6cb035debba8091955422a88a1ae5f22034a757a31b0478"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 801,
+            "path": "assets/media/responsive/monolit-1200.webp",
+            "bytes": 190006,
+            "sha256": "11d37680f660d87a7677f20a32adc91a8736c24f246754acbd4070f2a2cd33dc"
+          },
+          "avif": {
+            "height": 800,
+            "path": "assets/media/responsive/monolit-1200.avif",
+            "bytes": 149533,
+            "sha256": "bff82954ab5401a0cd35737eb4862faf75516f65123db733bf6d0099805c34de"
+          }
+        }
+      ]
+    },
+    "crystal-dome.webp": {
+      "source": "crystal-dome.webp",
+      "source_sha256": "1b80ca54966136109cf66206ab2566fbb9f7d486a4adbf8f753653f651610272",
+      "source_width": 1600,
+      "source_height": 1067,
+      "source_bytes": 395552,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 321,
+            "path": "assets/media/responsive/crystal-dome-480.webp",
+            "bytes": 38482,
+            "sha256": "6c72b03c731a6a7aa356426200a6c014b5beb9174602a97b3b6b158c6719d75c"
+          },
+          "avif": {
+            "height": 320,
+            "path": "assets/media/responsive/crystal-dome-480.avif",
+            "bytes": 28389,
+            "sha256": "a8687fe59e2d2d827aade21e1123b74212bb94deb87c10fc9f6586b08afdc386"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 534,
+            "path": "assets/media/responsive/crystal-dome-800.webp",
+            "bytes": 94846,
+            "sha256": "b008179cfb7a8268da1163e2ff1f5b7615957a2008b7904a5541bdb741807b59"
+          },
+          "avif": {
+            "height": 534,
+            "path": "assets/media/responsive/crystal-dome-800.avif",
+            "bytes": 70026,
+            "sha256": "297944cd6fdb1219089bb4a4f5922c6bfc63369cbaa135619b310af0c5a05de8"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 801,
+            "path": "assets/media/responsive/crystal-dome-1200.webp",
+            "bytes": 169444,
+            "sha256": "33d9c691e239b870a2c23ec68f11f0a899f77760b689322461ab185e22161597"
+          },
+          "avif": {
+            "height": 800,
+            "path": "assets/media/responsive/crystal-dome-1200.avif",
+            "bytes": 128222,
+            "sha256": "9400c396b0486978a2e7d404dff4525566f5c9087f6d573781d75c212da7dbf5"
+          }
+        }
+      ]
+    },
+    "edu-line.webp": {
+      "source": "edu-line.webp",
+      "source_sha256": "5fd5ccbccfa8e9005ee49c2640a43ff30ced7c7328392838cddbf87a7b4aff8f",
+      "source_width": 1600,
+      "source_height": 1067,
+      "source_bytes": 485484,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 321,
+            "path": "assets/media/responsive/edu-line-480.webp",
+            "bytes": 52364,
+            "sha256": "fb9089167bf49eac942d8171d6f9fb43d7979af7d5356a420952fda7d65557de"
+          },
+          "avif": {
+            "height": 320,
+            "path": "assets/media/responsive/edu-line-480.avif",
+            "bytes": 40789,
+            "sha256": "6502d5ab152cf8a0cda784ffad89767232a3a54d921f60d8320446ea06bd29b1"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 534,
+            "path": "assets/media/responsive/edu-line-800.webp",
+            "bytes": 125936,
+            "sha256": "b88f1003b7fa20bb7481044932400f1daa41236b49bdc791f94e2b8f32f7d63e"
+          },
+          "avif": {
+            "height": 534,
+            "path": "assets/media/responsive/edu-line-800.avif",
+            "bytes": 97691,
+            "sha256": "e3c2a5e914956539035ba00a7027766b8fbb2e7d97b44f4d64e745fa85fbddd5"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 801,
+            "path": "assets/media/responsive/edu-line-1200.webp",
+            "bytes": 223204,
+            "sha256": "94097aa06715dd1b7c46689b264f73a0312ffe02f4d2942b8e4a6fbf8aeb5b44"
+          },
+          "avif": {
+            "height": 800,
+            "path": "assets/media/responsive/edu-line-1200.avif",
+            "bytes": 169126,
+            "sha256": "80ef204f5379d565a0526e3831d93a04ae2f6d3e91f318786482fc7e9b56e781"
+          }
+        }
+      ]
+    },
+    "infinity.webp": {
+      "source": "infinity.webp",
+      "source_sha256": "f707868e635666479d3c2025e1acbba14db3b9a3c215d59b71b050f13e035fc6",
+      "source_width": 1600,
+      "source_height": 1067,
+      "source_bytes": 430978,
+      "variants": [
+        {
+          "width": 480,
+          "webp": {
+            "height": 321,
+            "path": "assets/media/responsive/infinity-480.webp",
+            "bytes": 41152,
+            "sha256": "2ddf91449f6d1a855f1c4e37c996d03429d805a307593442d32f2e1cc47d99d2"
+          },
+          "avif": {
+            "height": 320,
+            "path": "assets/media/responsive/infinity-480.avif",
+            "bytes": 30972,
+            "sha256": "9cf5418439d81e0f71fde8d90f7b7999f052600a26cab3948bb2f513fee303ee"
+          }
+        },
+        {
+          "width": 800,
+          "webp": {
+            "height": 534,
+            "path": "assets/media/responsive/infinity-800.webp",
+            "bytes": 103586,
+            "sha256": "14807d50a38e7b2c9d1958dbeeb763ef59f5e3f331636b81a0731b9dba79af42"
+          },
+          "avif": {
+            "height": 534,
+            "path": "assets/media/responsive/infinity-800.avif",
+            "bytes": 78270,
+            "sha256": "905841bc75cab3941bc0526c2e1a7f5dede1cdba6e4d099c872939b5e779060e"
+          }
+        },
+        {
+          "width": 1200,
+          "webp": {
+            "height": 801,
+            "path": "assets/media/responsive/infinity-1200.webp",
+            "bytes": 186178,
+            "sha256": "aee7251672d4e8b8dfca43769e0febfe991fd2c7eff802155a4b3d4344bc538c"
+          },
+          "avif": {
+            "height": 800,
+            "path": "assets/media/responsive/infinity-1200.avif",
+            "bytes": 142898,
+            "sha256": "312ca1b2105be4d65ab3e7cd1cd3df577277dba3659eaa834d2ca44ac9a9257d"
+          }
+        }
+      ]
     }
   }
 }

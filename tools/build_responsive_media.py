@@ -13,6 +13,11 @@ SOURCES={
     'homes.webp':[480,800,1200],
     'glass.webp':[480,800,1200],
     'academy.webp':[480,800,1200],
+    'roofs.webp':[480,800,1200],
+    'monolit.webp':[480,800,1200],
+    'crystal-dome.webp':[480,800,1200],
+    'edu-line.webp':[480,800,1200],
+    'infinity.webp':[480,800,1200],
 }
 WEBP_Q='82'
 AVIF_Q='55'

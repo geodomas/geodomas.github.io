@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SNAP=ROOT/'knowledge/iskra_public_snapshot.json'
 OUT=ROOT/'academy/families'
 BASE='https://geodomas.github.io'
-IMG={'GLAMPING':'glamping.webp','HOMES':'homes.webp','GLAZED':'glass.webp','ROOFS':'hero.webp','MONOLIT':'hero.webp','CRYSTAL_DOME':'academy.webp','EDU_LINE':'academy.webp','INFINITY':'academy.webp'}
+IMG={'GLAMPING':'glamping.webp','HOMES':'homes.webp','GLAZED':'glass.webp','ROOFS':'roofs.webp','MONOLIT':'monolit.webp','CRYSTAL_DOME':'crystal-dome.webp','EDU_LINE':'edu-line.webp','INFINITY':'infinity.webp'}
 
 def esc(v): return html.escape(str(v if v is not None else ''), quote=True)
 def slug(v): return str(v).lower().replace('_','-')

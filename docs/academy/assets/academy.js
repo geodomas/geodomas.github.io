@@ -4,9 +4,9 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&
 const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9_]+/g,'-');
 const familyHref=id=>`/academy/families/${slug(id).replaceAll('_','-')}.html`;
 function familyMediaMarkup(f){
- const map={GLAMPING:'glamping',HOMES:'homes',GLAZED:'glass',ROOFS:'hero',MONOLIT:'hero',CRYSTAL_DOME:'academy',EDU_LINE:'academy',INFINITY:'academy'};
- const stem=map[f.id]||'academy',hero=stem==='hero',sourceWidth=hero?640:480,sourceHeight=hero?373:304;
- const avifWins=['GLAMPING','HOMES','GLAZED'].includes(f.id);
+ const map={GLAMPING:'glamping',HOMES:'homes',GLAZED:'glass',ROOFS:'roofs',MONOLIT:'monolit',CRYSTAL_DOME:'crystal-dome',EDU_LINE:'edu-line',INFINITY:'infinity'};
+ const stem=map[f.id]||'academy',sourceWidth=480,newFamily=['ROOFS','MONOLIT','CRYSTAL_DOME','EDU_LINE','INFINITY'].includes(f.id),sourceHeight=newFamily?320:304;
+ const avifWins=Object.prototype.hasOwnProperty.call(map,f.id);
  const avif=avifWins?`<source type="image/avif" srcset="../assets/media/responsive/${stem}-${sourceWidth}.avif">`:'';
  return `<picture>${avif}<img src="../assets/media/responsive/${stem}-${sourceWidth}.webp" width="${sourceWidth}" height="${sourceHeight}" loading="lazy" decoding="async" alt="${esc(f.title)} — GEODOMAS public product family"></picture>`;
 }
@@ -44,7 +44,7 @@ export async function bootFamily(){
  let metaDesc=document.querySelector('meta[name="description"]');const description=`${f.summary} GEODOMAS public product orientation with model routes and verification boundaries.`;if(metaDesc)metaDesc.content=description;
  let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}canonical.href=`${location.origin}${familyHref(id)}`;
  const setMeta=(selector,value)=>{const el=document.querySelector(selector);if(el)el.setAttribute('content',value);};setMeta('meta[property="og:title"]',`${f.title} · GEODOMAS Academy`);setMeta('meta[property="og:description"]',description);setMeta('meta[property="og:url"]',canonical.href);setMeta('meta[name="twitter:title"]',`${f.title} · GEODOMAS Academy`);setMeta('meta[name="twitter:description"]',description);
- const imageByFamily={GLAMPING:'glamping.webp',HOMES:'homes.webp',GLAZED:'glass.webp',ROOFS:'hero.webp',MONOLIT:'hero.webp',CRYSTAL_DOME:'academy.webp',EDU_LINE:'academy.webp',INFINITY:'academy.webp'};const socialImage=`${location.origin}/assets/media/${imageByFamily[id]||'academy.webp'}`;setMeta('meta[property="og:image"]',socialImage);setMeta('meta[name="twitter:image"]',socialImage);
+ const imageByFamily={GLAMPING:'glamping.webp',HOMES:'homes.webp',GLAZED:'glass.webp',ROOFS:'roofs.webp',MONOLIT:'monolit.webp',CRYSTAL_DOME:'crystal-dome.webp',EDU_LINE:'edu-line.webp',INFINITY:'infinity.webp'};const socialImage=`${location.origin}/assets/media/${imageByFamily[id]||'academy.webp'}`;setMeta('meta[property="og:image"]',socialImage);setMeta('meta[name="twitter:image"]',socialImage);
  const compareLink=document.querySelector('.family-compare-link');if(compareLink)compareLink.href=`/academy/compare.html?a=${encodeURIComponent(id)}`;
  const startLink=document.querySelector('.family-actions .btn-glass');if(startLink)startLink.href=`/academy/brief-builder.html?family=${encodeURIComponent(id)}`;
  const snapEl=document.querySelector('#family-snapshot');if(snapEl)snapEl.textContent=`PUBLIC SNAPSHOT · ${snap.snapshot_date||'CURRENT'}`;
