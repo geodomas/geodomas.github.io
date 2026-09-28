@@ -3,6 +3,14 @@ const K=path=>new URL(`../../knowledge/${path}`,import.meta.url);
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9_]+/g,'-');
 const familyHref=id=>`/academy/families/${slug(id).replaceAll('_','-')}.html`;
+function familyMediaMarkup(f){
+ const map={GLAMPING:'glamping',HOMES:'homes',GLAZED:'glass',ROOFS:'hero',MONOLIT:'hero',CRYSTAL_DOME:'academy',EDU_LINE:'academy',INFINITY:'academy'};
+ const stem=map[f.id]||'academy',hero=stem==='hero',sourceWidth=hero?640:480,sourceHeight=hero?373:304;
+ const avifWins=['GLAMPING','HOMES','GLAZED'].includes(f.id);
+ const avif=avifWins?`<source type="image/avif" srcset="../assets/media/responsive/${stem}-${sourceWidth}.avif">`:'';
+ return `<picture>${avif}<img src="../assets/media/responsive/${stem}-${sourceWidth}.webp" width="${sourceWidth}" height="${sourceHeight}" loading="lazy" decoding="async" alt="${esc(f.title)} — GEODOMAS public product family"></picture>`;
+}
+
 function familyModels(f){return f.primary_models||f.active_model_families||f.public_reference_models||[];}
 function modelLabel(m){if(typeof m==='string')return m;const a=[m.id||m.name];if(m.diameter_m)a.push(`Ø${m.diameter_m} m`);if(m.area_m2)a.push(`${m.area_m2} m²`);return a.filter(Boolean).join(' · ');}
 function humanAuthority(v=''){if(v.includes('specialist_current'))return'CURRENT SPECIALIST SNAPSHOT';if(v.includes('public_direction'))return'PUBLIC DIRECTION';return String(v).replaceAll('_',' ').toUpperCase();}
@@ -21,7 +29,7 @@ export async function bootIndex(){
  const [snap,router]=await Promise.all([j(K('iskra_public_snapshot.json')),j(K('project_router.json'))]);
  const dateEl=document.querySelector('#snapshot-date');if(dateEl)dateEl.textContent=`${snap.snapshot_date||'current'} · ${(snap.status||'curated_public_snapshot').replaceAll('_',' ').toUpperCase()}`;
  const grid=document.querySelector('#families');
- grid.innerHTML=snap.families.map((f,i)=>`<a class="family-card family-${slug(f.id)}" href="${familyHref(f.id)}"><div class="family-card-media"><span>${String(i+1).padStart(2,'0')} · ${esc(f.id)}</span></div><div class="family-card-body"><span class="tag">${esc(humanAuthority(f.authority))}</span><h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p><div class="chips">${(f.best_for||[]).slice(0,3).map(x=>`<span>${esc(x)}</span>`).join('')}</div><div class="more">Explore family →</div></div></a>`).join('');
+ grid.innerHTML=snap.families.map((f,i)=>`<a class="family-card family-${slug(f.id)}" href="${familyHref(f.id)}"><div class="family-card-media has-image">${familyMediaMarkup(f)}<span>${String(i+1).padStart(2,'0')} · ${esc(f.id)}</span></div><div class="family-card-body"><span class="tag">${esc(humanAuthority(f.authority))}</span><h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p><div class="chips">${(f.best_for||[]).slice(0,3).map(x=>`<span>${esc(x)}</span>`).join('')}</div><div class="more">Explore family →</div></div></a>`).join('');
  const sel=document.querySelector('#intent');sel.innerHTML=router.routes.map(x=>`<option value="${esc(x.id)}">${esc(x.label)}</option>`).join('');
  const out=document.querySelector('#route-result');
  document.querySelector('#route-btn').onclick=()=>{const x=router.routes.find(r=>r.id===sel.value);const f=snap.families.find(y=>y.id===x.family);out.innerHTML=`<strong>${esc(x.family)} — ${esc(f?.title||x.family)}</strong>\n\n${esc(x.why)}\n\nNext: ${esc((f?.project_start||[]).slice(0,4).join(' → '))}\n\nBoundary: ${esc(router.boundary)}<div class="route-actions"><a href="${familyHref(x.family)}">Open family →</a><a href="brief-builder.html?family=${encodeURIComponent(x.family)}">Build project brief →</a><a href="https://chat.geodomas.lt/">Ask GEODOMAS AI ↗</a></div>`;};

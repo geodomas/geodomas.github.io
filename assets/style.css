@@ -27,3 +27,25 @@ html{scroll-padding-top:112px}::selection{background:#d9bb8d;color:#171717}.skip
 .product-media picture{display:block;width:100%;height:100%}.product-media picture img{display:block;width:100%;height:192px;object-fit:cover}
 @media(max-width:1180px){.product-media picture img{height:210px}}
 @media(max-width:620px){.product-media picture img{height:220px}}
+/* 2026-09-28 accessibility, readability and touch-target polish */
+.eyebrow{font-size:.72rem}
+.value-row b{font-size:.72rem;color:#615b53}.value-row small{font-size:.75rem;color:#67635d}
+.system-cards small{font-size:.72rem;color:#7b5525}
+.technology-stack span{font-size:.7rem}.technology-stack small{font-size:.75rem;color:#b0b7bf}.technology-stack b{font-size:.74rem}
+.lab-proof small{font-size:.72rem;color:#805a2b}.lab-proof b{font-size:.72rem;color:#4f5256}.lab-proof span{font-size:.75rem;color:#62666b}
+.tool-card label{font-size:.75rem;color:#c1c6ce}.tool-num{font-size:.7rem}.ai-note{font-size:.75rem;color:#aab0b8}.knowledge-label{font-size:.7rem;color:#7e5728}
+.calc-orbit small,.lab-boundary-orbit small{font-size:.62rem;color:#aeb5bd}
+.menu-toggle,.floating-ai,.tool-card button,.tool-ai-btn{min-height:44px}
+.gateway-actions a,.technology-actions .text-link,.final-actions .text-link{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:900px){.main-nav a{display:flex;align-items:center;min-height:44px}.main-nav .nav-ai{min-height:44px}}
+/* Contrast completion pass: semantic text meets a stronger visual floor on solid surfaces. */
+.eyebrow{color:#7a5222}
+.final-cta .eyebrow,.technology-teaser .eyebrow,.lab-section .eyebrow,.lab-next-step .eyebrow{color:#dfbd89}
+.product-media>span{font-size:.7rem;background:rgba(10,10,10,.82)}
+.value-row>div>span{color:#655d53}.logic-row b{color:#665e54}
+.site-footer .footer-grid p{color:#5f5a54}.footer-grid>div:nth-child(n+2)>span{font-size:.7rem;color:#775223}.footer-bottom{color:#5f5a54}
+.floating-ai span,.floating-ai i{color:#724b1d}
+/* Microtype and mobile interaction floor. */
+.brand small{font-size:.7rem}.hero-proof{font-size:.68rem}.hero-scroll{font-size:.68rem}
+.skip-link,.main-nav a{min-height:44px;display:flex;align-items:center}
+@media(max-width:900px){.hero-subactions a,.project-actions a,.mini-ai,.footer-grid a{display:flex;align-items:center;min-height:44px}.footer-grid>div:nth-child(n+2){gap:2px}}

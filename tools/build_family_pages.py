@@ -46,7 +46,7 @@ def tech_items(f):
     return out or ['Project-specific configuration.']
 
 def render(f, all_f, snap):
-    fid=f['id']; sl=slug(fid); title=f['title']; description=f"{f['summary']} GEODOMAS public product orientation with model routes and verification boundaries."
+    fid=f['id']; sl=slug(fid); title=f['title']; description=f"{title} — GEODOMAS public orientation, current model routes, technology options and project-verification boundaries."
     canonical=f"{BASE}/academy/families/{sl}.html"; image=f"{BASE}/assets/media/{IMG.get(fid,'academy.webp')}"
     models=model_items(f); tech=tech_items(f); notes=' '.join(f.get('notes') or []) or 'Final structural, envelope, legal and commercial claims remain project-specific.'
     meta=[f"{len(models)} PUBLIC MODEL / ROUTE ITEMS",f"{len(tech)} CONFIGURATION ITEMS",'ENGINEERING GATE PRESERVED']
