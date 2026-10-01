@@ -78,3 +78,18 @@ body[data-family="GLAMPING"] .family-visual{background-image:image-set(url('../.
 .hero-caption{font-size:.68rem}
 /* Final semantic microcopy floor. */
 .hero-caption,.family-meta span,.family-subnav span,.compare-orbit b,.privacy-seal b,.compare-orbit small,.privacy-seal small{font-size:.7rem}
+/* 2026-10-01 visual-director pass: let the dedicated family artwork carry more of the product identity. */
+.family-card-media{height:auto;aspect-ratio:8/5}
+.family-card-media picture,.family-card-media img{width:100%;height:100%}
+.family-card-media img{object-fit:cover;object-position:50% 50%}
+.compare-card-image{height:clamp(210px,18vw,260px)}
+
+/* The five new masters were composed around a centered architectural subject.
+   Keep mobile family heroes centered instead of inheriting the legacy 62% crop. */
+@media(max-width:620px){
+  body[data-family="ROOFS"] .family-visual,
+  body[data-family="MONOLIT"] .family-visual,
+  body[data-family="CRYSTAL_DOME"] .family-visual,
+  body[data-family="EDU_LINE"] .family-visual,
+  body[data-family="INFINITY"] .family-visual{background-position:50% center}
+}

@@ -5,10 +5,10 @@ const slug=s=>String(s||'').toLowerCase().replace(/[^a-z0-9_]+/g,'-');
 const familyHref=id=>`/academy/families/${slug(id).replaceAll('_','-')}.html`;
 function familyMediaMarkup(f){
  const map={GLAMPING:'glamping',HOMES:'homes',GLAZED:'glass',ROOFS:'roofs',MONOLIT:'monolit',CRYSTAL_DOME:'crystal-dome',EDU_LINE:'edu-line',INFINITY:'infinity'};
- const stem=map[f.id]||'academy',sourceWidth=480,newFamily=['ROOFS','MONOLIT','CRYSTAL_DOME','EDU_LINE','INFINITY'].includes(f.id),sourceHeight=newFamily?320:304;
- const avifWins=Object.prototype.hasOwnProperty.call(map,f.id);
- const avif=avifWins?`<source type="image/avif" srcset="../assets/media/responsive/${stem}-${sourceWidth}.avif">`:'';
- return `<picture>${avif}<img src="../assets/media/responsive/${stem}-${sourceWidth}.webp" width="${sourceWidth}" height="${sourceHeight}" loading="lazy" decoding="async" alt="${esc(f.title)} — GEODOMAS public product family"></picture>`;
+ const stem=map[f.id]||'academy',newFamily=['ROOFS','MONOLIT','CRYSTAL_DOME','EDU_LINE','INFINITY'].includes(f.id),sourceHeight=newFamily?534:507;
+ const sizes='(max-width:620px) 100vw, (max-width:1180px) 50vw, 25vw';
+ const avif=Object.prototype.hasOwnProperty.call(map,f.id)?`<source type="image/avif" srcset="../assets/media/responsive/${stem}-480.avif 480w, ../assets/media/responsive/${stem}-800.avif 800w" sizes="${sizes}">`:'';
+ return `<picture>${avif}<img src="../assets/media/responsive/${stem}-480.webp" srcset="../assets/media/responsive/${stem}-480.webp 480w, ../assets/media/responsive/${stem}-800.webp 800w" sizes="${sizes}" width="800" height="${sourceHeight}" loading="lazy" decoding="async" alt="${esc(f.title)} — GEODOMAS public product family"></picture>`;
 }
 
 function familyModels(f){return f.primary_models||f.active_model_families||f.public_reference_models||[];}
