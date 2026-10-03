@@ -93,3 +93,14 @@ body[data-family="GLAMPING"] .family-visual{background-image:image-set(url('../.
   body[data-family="EDU_LINE"] .family-visual,
   body[data-family="INFINITY"] .family-visual{background-position:50% center}
 }
+/* 2026-10-03 hero typography balance: preserve image authority on wide screens. */
+@media(min-width:901px){
+  .hero-copy{width:min(900px,82%)}
+  .family-copy{max-width:900px}
+  .hero-copy h1,.family-copy h1{font-size:clamp(3.8rem,6vw,6.2rem);text-wrap:balance}
+}
+/* Mobile family heroes need extra breathing room for the longest public family names. */
+@media(max-width:620px){
+  .family-hero-premium{height:650px}
+  .family-copy h1{font-size:3.25rem;text-wrap:balance}
+}
